@@ -1,6 +1,6 @@
 # progetto_esempio_test
 
-## Questo file descriverà il progetto
+## Questo file descriverà il progetto, questi sono i membri della classe
 
 ## P.P.
 
