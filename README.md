@@ -14,4 +14,3 @@
 
 # Argomenti
 
-... una modifica
