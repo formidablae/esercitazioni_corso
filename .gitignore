@@ -2,6 +2,7 @@
 Thumbs.db
 .DS_Store
 out
+.idea
 
 ### IntelliJ IDEA ###
 out/
