@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02e3b66e-1731-4c68-ab16-060f38c934e9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day5/BFSPathfinding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day5/BFSPathfinding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day5/ContaPariDispari.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day5/Matrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day5/StringsArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +47,9 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2sO9aAf6qMZxB1mh0MN6tk3VS3G" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -74,7 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1738315815009</updated>
       <workItem from="1738316598905" duration="147000" />
-      <workItem from="1738316748401" duration="1478000" />
+      <workItem from="1738316748401" duration="5660000" />
     </task>
     <servers />
   </component>
