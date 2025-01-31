@@ -1,4 +1,4 @@
-package esercizi_in_lezione.week1.day5;
+package esercizi_in_lezione.week1.day5.other;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;

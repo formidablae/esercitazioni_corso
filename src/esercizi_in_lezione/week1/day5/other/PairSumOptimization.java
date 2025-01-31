@@ -1,45 +1,49 @@
-package esercizi_in_lezione.week1.day5;
+package esercizi_in_lezione.week1.day5.other;
 
 import java.util.*;
 
-public class DuplicateFinder {
+public class PairSumOptimization {
     public static void main(String[] args) {
         int size = 100000;
+        int target = 100000;
         int[] arr = new Random().ints(size, 1, 1000000).toArray();
 
         long start, end;
 
-        // Brute Force (O(n^2))
+        // O(n^2) approach
         start = System.currentTimeMillis();
-        findDuplicatesBruteForce(arr);
+        findPairBruteForce(arr, target);
         end = System.currentTimeMillis();
         System.out.println("Brute Force Time: " + (end - start) + "ms");
 
-        // HashSet (O(n))
+        // O(n) approach
         start = System.currentTimeMillis();
-        findDuplicatesHashSet(arr);
+        findPairOptimized(arr, target);
         end = System.currentTimeMillis();
-        System.out.println("HashSet Time: " + (end - start) + "ms");
+        System.out.println("HashMap Time: " + (end - start) + "ms");
     }
 
     // O(n^2) approach
-    public static void findDuplicatesBruteForce(int[] arr) {
+    public static boolean findPairBruteForce(int[] arr, int target) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
-                if (arr[i] == arr[j]) {
-                    break;
+                if (arr[i] + arr[j] == target) {
+                    return true;
                 }
             }
         }
+        return false;
     }
 
-    // O(n) approach using HashSet
-    public static void findDuplicatesHashSet(int[] arr) {
+    // O(n) approach using HashMap
+    public static boolean findPairOptimized(int[] arr, int target) {
         Set<Integer> seen = new HashSet<>();
         for (int num : arr) {
-            if (!seen.add(num)) {
-                break;
+            if (seen.contains(target - num)) {
+                return true;
             }
+            seen.add(num);
         }
+        return false;
     }
 }

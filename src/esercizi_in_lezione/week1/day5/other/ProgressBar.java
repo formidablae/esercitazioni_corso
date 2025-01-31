@@ -1,4 +1,4 @@
-package esercizi_in_lezione.week1.day5;
+package esercizi_in_lezione.week1.day5.other;
 
 public class ProgressBar {
     public static void main(String[] args) throws InterruptedException {
