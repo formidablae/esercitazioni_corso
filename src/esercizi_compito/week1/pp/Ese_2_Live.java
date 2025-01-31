@@ -1,4 +1,4 @@
-/*
+package esercizi_compito.week1.pp;/*
 Esercizio 2: Convertitore di voti
 Obiettivo: Creare un programma che converta un voto numerico in una lettera (A, B, C, D, F) e fornisca un messaggio di feedback.
 
