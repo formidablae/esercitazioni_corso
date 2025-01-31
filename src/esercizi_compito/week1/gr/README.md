@@ -1,1 +1,1 @@
-Esercizio sviluppato da PP
+Esercizio sviluppato da GR
