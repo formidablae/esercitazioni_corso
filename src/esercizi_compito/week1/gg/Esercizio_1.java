@@ -18,7 +18,7 @@ Deve utilizzare un'istruzione switch per eseguire l'operazione matematica richie
 Deve stampare il risultato finale a schermo.
 Deve gestire eventuali inserimenti errati o operatori non validi.
  */
-public class Main {
+public class Esercizio_1 {
     public static void main(String[] args) {
         Scanner lettore = new Scanner(System.in);
         // Richiesta utente
