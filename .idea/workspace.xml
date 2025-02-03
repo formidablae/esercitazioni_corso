@@ -5,10 +5,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02e3b66e-1731-4c68-ab16-060f38c934e9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day5/ContaPariDispari.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day5/Matrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day5/StringsArray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_compito/week1/dc/Esercizio5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_compito/week2/dc/Esercizio5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_compito/week1/dc/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_compito/week2/dc/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_compito/week1/gg/Esercizio_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_compito/week2/gg/Esercizio_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_compito/week1/gg/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_compito/week2/gg/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_compito/week1/gr/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_compito/week2/gr/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_compito/week1/gr/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_compito/week2/gr/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_compito/week1/pp/Ese_2_Live.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_compito/week2/pp/Ese_2_Live.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_compito/week1/pp/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_compito/week2/pp/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_compito/week1/rs/EsercizioTemperatura2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_compito/week2/rs/EsercizioTemperatura2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_compito/week1/rs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_compito/week2/rs/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day1/Casting1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day1/Casting1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day1/Casting2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day1/Casting2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day1/StringheEsercizio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day1/StringheEsercizio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day1/TipiPrimitivi1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day1/TipiPrimitivi1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day1/TipiPrimitivi2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day1/TipiPrimitivi2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day2/Funzioni1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day2/Funzioni1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day2/Funzioni2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day2/Funzioni2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day2/Funzioni3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day2/Funzioni3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day2/Funzioni4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day2/Funzioni4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day2/OperatoriAritmetici1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day2/OperatoriAritmetici1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day2/OperatoriAssegnazione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day2/OperatoriAssegnazione.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day2/OperatoriComparazione1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day2/OperatoriComparazione1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day3/ControllaEta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day3/ControllaEta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day3/GiorniSettimana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day3/GiorniSettimana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day3/LoginSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day3/LoginSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day3/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day3/SwitchConChar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day3/SwitchConChar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day4/DoWhileExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day4/DoWhileExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day4/ForLoop1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day4/ForLoop1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day4/ForLoop2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day4/ForLoop2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day4/NestedForLoops.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day4/NestedForLoops.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day4/WhileLoopExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day4/WhileLoopExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day5/ArrayDimFixed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day5/ArrayDimFixed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day5/ArrayExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day5/ArrayExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day5/ContaPariDispari.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day5/ContaPariDispari.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day5/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day5/Matrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day5/MinMaxArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day5/MinMaxArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day5/StringsArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day5/StringsArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day5/other/BFSPathfinding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day5/other/BFSPathfinding.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day5/other/Clock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day5/other/Clock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day5/other/Diamond.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day5/other/Diamond.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day5/other/DuplicateFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day5/other/DuplicateFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day5/other/PairSumOptimization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day5/other/PairSumOptimization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day5/other/ProgressBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day5/other/ProgressBar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_in_lezione/week1/day5/other/SortingOptimization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_in_lezione/week2/day5/other/SortingOptimization.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +124,7 @@
       <option name="presentableId" value="Default" />
       <updated>1738315815009</updated>
       <workItem from="1738316598905" duration="147000" />
-      <workItem from="1738316748401" duration="5660000" />
+      <workItem from="1738316748401" duration="11036000" />
     </task>
     <servers />
   </component>
