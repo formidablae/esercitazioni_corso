@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02e3b66e-1731-4c68-ab16-060f38c934e9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="dc585184-beb2-4622-a239-aaea27f43fad" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/src/esercizi_compito/week3/rs/AnalisiArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_compito/week3/rs/AnalisiArray.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,31 +54,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-<<<<<<< HEAD
-    "Application.ArrayDimFixed.executor": "Run",
-    "Application.EsercizioTemperatura2.executor": "Run",
-    "Application.Esercizio_1.executor": "Run",
-=======
-    "Application.StatsDiUnArray.executor": "Run",
->>>>>>> 4f609e1544b8682bf54f6875e5f81e9e967b6605
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-<<<<<<< HEAD
-    "last_opened_file_path": "C:/Users/Mary/IdeaProjects/Esercizi-java",
-=======
-    "last_opened_file_path": "C:/Users/prazz/Documents/Corso Java Backend/esercitazioni_corso",
->>>>>>> 4f609e1544b8682bf54f6875e5f81e9e967b6605
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+    "Application.AnalisiArray.executor": "Run",
+    "git-widget-placeholder": "main"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
