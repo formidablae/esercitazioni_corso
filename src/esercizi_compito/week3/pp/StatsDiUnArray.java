@@ -24,5 +24,32 @@ public class StatsDiUnArray {
     public static void main(String[] args) {
         // Implementare qui la soluzione
         int[] arrayInput = {12, 70, 35, 89, 4, 55, 40};
+        int l = arrayInput.length;
+        int minimo = arrayInput[0];
+        int massimo = arrayInput[0];
+        int somma = 0;
+        int pari = 0;
+        int dispari = 0;
+        for (int i = 1; i < l; i++) {
+            if (arrayInput[i] < minimo) {
+                minimo = arrayInput[i];
+            }
+            if (arrayInput[i] > massimo) {
+                massimo = arrayInput[i];
+            }
+            somma = somma + arrayInput[i];
+            if (arrayInput[i] % 2 == 0) {
+                pari++;
+            }
+            System.out.print(arrayInput[i] + ", ");
+        }
+        dispari = l - pari;
+        double media = somma / l;
+        System.out.println("Il minimo dell'array è pari a: " + minimo);
+        System.out.println("Il massimo dell'array è pari a: " + massimo);
+        System.out.println("La somma di tutti gli elementi dell'array è pari a: " + somma);
+        System.out.println("La media degli elementi dell'array è pari a: " + media);
+        System.out.println("In questo array ci sono " + pari + " numeri pari");
+        System.out.println("In questo array ci sono " + dispari + " numeri dispari");
     }
 }
