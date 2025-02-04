@@ -31,6 +31,14 @@ public class ContoBancario {
         return saldo;
     }
 
+    public int getNumeroConto() {
+        return numeroConto;
+    }
+
+    public void setIntestatario(String ilNuovoIntestatario) {
+        this.intestatario = ilNuovoIntestatario;
+    }
+
     public String toString() {
         return "Conto #" + numeroConto + " intestato a " + intestatario + " ha saldo " + saldo;
     }
@@ -52,5 +60,11 @@ public class ContoBancario {
         System.out.println(conto);
         conto.preleva(600.0);
         System.out.println(conto);
+
+        conto.setIntestatario("Luca Brambilla");
+        System.out.println(conto);
+
+        // conto.intestatario = "Luca X";
+        // System.out.println(conto);
     }
 }
