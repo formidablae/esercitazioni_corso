@@ -15,7 +15,7 @@ Obiettivo:
     2. Aggiungere:
 
     - Un costruttore che accetta tutti i parametri.
-    - Getter e setter per ogni proprietà.
+    - Getter per ogni proprietà.
     - Un metodo toString() per restituire una descrizione dello studente.
 
     3. Nel main:
@@ -46,10 +46,74 @@ Obiettivo:
 
 class Studente {
     // Implementare qui la soluzione
+    String nome;
+    String cognome;
+    int eta;
+    double voto;
+
+    public Studente (String nome, String cognome, int eta, double voto) {
+
+        this.nome = nome;
+        this.cognome = cognome;
+        this.eta = eta;
+        this.voto = voto;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCognome() {
+        return cognome;
+    }
+
+    public int getEta() {
+        return eta;
+    }
+
+    public double getVoto() {
+        return voto;
+    }
+    public String toString() {
+        return "Nome: " + nome + ", cognome: " + cognome + ", eta: " +eta + ", voto: " + voto;
+    }
+
 }
+
+
 
 public class GestioneStudenti {
     public static void main(String[] args) {
         // Implementare qui la soluzione
+        Studente s1 = new Studente ("Luca", "Rossi", 19, 8.5);
+        Studente s2 = new Studente ("Giulia", "Bianchi", 17, 7.5);
+        Studente s3 = new Studente ("Marco", "Verdi", 24, 9.0);
+        Studente s4 = new Studente ("Silvio", "Blu", 32, 7);
+        Studente s5 = new Studente ("Marta", "Arancione", 16, 9.5);
+
+        Studente [] elencoStudenti = {s1, s2, s3, s4, s5};
+        double sommaVoti = 0;
+
+
+        Studente migliorStudente = elencoStudenti[0];
+        System.out.println("Elenco studenti:");
+        for (int i = 0; i < elencoStudenti.length; i++) {
+            System.out.println(elencoStudenti[i]);
+            if (elencoStudenti[i].getVoto() > migliorStudente.getVoto()) {
+                migliorStudente = elencoStudenti[i];
+            }
+            sommaVoti += elencoStudenti[i].getVoto();
+        }
+
+        System.out.println("Lo studente migliore è: " + migliorStudente);
+        System.out.println("La media dei voti è " + sommaVoti/ elencoStudenti.length);
+
+        for (int i = 0; i < elencoStudenti.length; i++) {
+            if (elencoStudenti[i].getEta() >= 18) {
+                System.out.println("Lo studente " +elencoStudenti[i].getNome() + " è maggiorenne");
+
+            }
+        }
+
     }
 }
