@@ -57,6 +57,12 @@ class Rettangolo {
     }
 }
 
+class Quadrato extends Rettangolo {
+    public Quadrato(double lato) {
+        super(lato, lato);
+    }
+}
+
 public class CalcoliGeometrici {
 
     public static void main(String[] args) {
