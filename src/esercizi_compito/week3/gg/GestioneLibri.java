@@ -118,10 +118,11 @@ public class GestioneLibri {
             }
             somma += libri[i].getPrezzo();
         }
-        System.out.println("Prezzo medio dei libri: "+ somma / libri.length);
-        System.out.println("Libro piu costoso: "+ piuCostoso);
+        System.out.println("\nPrezzo medio dei libri: "+ somma / libri.length);
 
-        System.out.println("I libri usciti dopo il 2015 sono\n");
+        System.out.println("\nLibro piu costoso: "+ piuCostoso);
+
+        System.out.println("\nI libri usciti dopo il 2015 sono:");
         for(int i = 0; i < libri.length; i++){
             if(libri[i].getAnnoPubblicazione() > 2015){
                 System.out.println(libri[i]);
