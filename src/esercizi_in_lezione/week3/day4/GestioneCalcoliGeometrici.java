@@ -1,5 +1,7 @@
 package esercizi_in_lezione.week3.day4;
 
+import java.util.Arrays;
+
 public class GestioneCalcoliGeometrici {
     public static void main(String[] args) {
         // FiguraGeometrica figGeom = new FiguraGeometrica("Figura");
@@ -11,8 +13,10 @@ public class GestioneCalcoliGeometrici {
         Cerchio ilMioCerchio3 = new Cerchio(5.0);
 
         FiguraGeometrica[] elencoFigureGeometriche = {ilMioRettangolo1, ilMioRettangolo2, ilMioRettangolo3, ilMioCerchio1, ilMioCerchio2, ilMioCerchio3};
-        String elencoFigureGeometricheStr = getString(elencoFigureGeometriche);
-        System.out.println("Le mie figure geometriche:\n" + elencoFigureGeometricheStr);
+        System.out.println("Le mie figure geometriche:\n" + Arrays.toString(elencoFigureGeometriche)
+            .replace("[", "[\n  ")
+            .replace(", ", ",\n  ")
+            .replace("]", "\n]"));
 
         double lAreaRett1 = ilMioRettangolo1.calcolaArea();
         System.out.println("lAreaRett1: " + lAreaRett1);
@@ -30,13 +34,5 @@ public class GestioneCalcoliGeometrici {
         System.out.println("\nprint()");
         elencoFigureGeometriche[0].print();
         elencoFigureGeometriche[3].print();
-    }
-
-    public static String getString(FiguraGeometrica[] figGeo) {
-        String res = "";
-        for (int i = 0; i < figGeo.length; i++) {
-            res += "  - " + figGeo[i] + "\n";
-        }
-        return res;
     }
 }
