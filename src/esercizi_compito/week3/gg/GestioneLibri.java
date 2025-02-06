@@ -45,7 +45,7 @@ class Libro {
 
 }
 
-public class GestioneLiberi {
+public class GestioneLibri {
     public static void main(String[] args) {
         // Implementare la soluzione qui
     }
