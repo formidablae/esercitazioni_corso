@@ -1,4 +1,4 @@
-package esercizi_compito.week3.pp;
+package esercizi_compito.week3.pp.gestione_veicoli;
 
 class Moto extends Veicolo {
     private boolean haCarena;

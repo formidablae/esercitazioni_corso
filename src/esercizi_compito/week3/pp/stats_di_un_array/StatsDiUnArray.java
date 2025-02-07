@@ -1,4 +1,4 @@
-package esercizi_compito.week3.pp;
+package esercizi_compito.week3.pp.stats_di_un_array;
 
 /*
 Scrivere un programma Java che esegua diverse operazioni su un array di numeri interi utilizzando i cicli.

@@ -1,4 +1,4 @@
-package esercizi_compito.week3.pp;
+package esercizi_compito.week3.pp.gestione_veicoli;
 
 abstract class Veicolo {
     protected String marca;

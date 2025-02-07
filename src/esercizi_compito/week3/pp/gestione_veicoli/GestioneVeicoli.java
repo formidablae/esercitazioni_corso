@@ -1,4 +1,4 @@
-package esercizi_compito.week3.pp;
+package esercizi_compito.week3.pp.gestione_veicoli;
 
 /*
 1. Scrivere 3 classi Veicolo, Auto e Moto

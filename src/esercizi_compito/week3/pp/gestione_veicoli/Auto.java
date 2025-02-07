@@ -1,4 +1,4 @@
-package esercizi_compito.week3.pp;
+package esercizi_compito.week3.pp.gestione_veicoli;
 
 class Auto extends Veicolo {
     private int porte;
