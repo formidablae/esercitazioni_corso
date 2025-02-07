@@ -21,5 +21,22 @@ package esercizi_compito.week3.pp;
  */
 
 public class GestioneVeicoli {
+    public static void main(String[] args) {
+        Veicolo[] veicoli = {
+                new Auto("Toyota", "Corolla", 2022, 5),
+                new Moto("Yamaha", "R1", 2021, true),
+                new Auto("Fiat", "Panda", 2020, 3),
+                new Moto("Ducati", "Monster", 2023, false),
+                new Auto("Audi", "A4", 2022, 5)
+        };
 
+        int lunghezzaArray = veicoli.length;
+        for (int i = 0; i < lunghezzaArray; i++) {
+            System.out.println(veicoli[i]);
+        }
+
+        System.out.println(((Auto) veicoli[0]).getPorte());
+
+        ((Moto) veicoli[1]).setHaCarena(false);
+    }
 }
