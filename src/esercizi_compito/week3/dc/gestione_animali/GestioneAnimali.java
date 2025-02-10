@@ -1,7 +1,7 @@
-package esercizi_compito.week3.dc.gestione_animali;
+kage esercizi_compito.week3.dc.gestione_animali;
 
 /*
- * 1. Creare una classe Animale non istanziabile con atributi nome e eta;
+ * 1. Creare una classe Animale non istanziabile con attributi nome e eta;
  * 2. Creare una classe Cane che estende Animale con attributi razza;
  * 3. Creare una classe Gatto che estende Animale con attributi colore;
  * 4. Implementare metodi getter e setter
@@ -11,12 +11,35 @@ package esercizi_compito.week3.dc.gestione_animali;
  * - Cane: "Roghi",  5, "Labrador"
  * - Gatto: "Micio", 3, "Nero"
  * - Cane: "Fido", 2, "Bulldog"
- * - Gatto: "Whiskers", 4, "Siamese"
+ * - Gatto: "Whiskers", 4, "Grigio"
  * - Cane: "Buddy", 7, "Pastore Tedesco"
  * 8. Stampa l'array di animali
  * 9. Imposta con setter una nuova razza per il primo animale dell'array
- * 10. Importa con un setter u nuovo colore per il secondo animale dell'array
+ * 10. Importa con un setter un nuovo colore per il secondo animale dell'array
  */
 
+import java.util.Arrays;
+
 public class GestioneAnimali {
+    public static void main(String[] args) {
+        Animale[] animali = {
+                new Cane("Roghi", 5, "Labrador"),
+                new Gatto("Micio", 3, "Nero"),
+                new Cane("Fido", 2, "Bulldog"),
+                new Gatto("Whiskers", 4, "Grigio"),
+                new Cane("Buddy", 7, "Pastore Tedesco")
+        };
+
+        System.out.println(Arrays.toString(animali));
+
+        ((Cane) animali[0]).setRazza("Maltese");
+
+        System.out.println(Arrays.toString(animali));
+
+        ((Gatto) animali[1]).setColore("Bianco");
+
+        System.out.println(Arrays.toString(animali));
+
+
+    }
 }
