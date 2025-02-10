@@ -1,4 +1,4 @@
-package esercizi_compito.week3.dc;
+package esercizi_compito.week3.dc.gestione_studenti;
 
 /*
 Obiettivo:
