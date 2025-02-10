@@ -1,5 +1,7 @@
 package esercizi_compito.week4.gg_rs;
 
+import java.util.ArrayList;
+
 /**
  * gg
  * - Creare una gerarchia di classi per rappresentare dispositivi elettronici.
@@ -32,5 +34,13 @@ package esercizi_compito.week4.gg_rs;
 public class GestioneDispositiviElettronici {
     public static void main(String[] args) {
         // implementare qui la soluzione
+
+        ArrayList<String> connessioni = new ArrayList<>();
+        connessioni.add("5g");
+        Smartphone mobile = new Smartphone("Samsung", "s3", "Android",
+                                            299.99, 6.000, "415231263873821671",
+                                                connessioni, "5ollici", true);
+
+        System.out.println(mobile);
     }
 }
