@@ -42,5 +42,27 @@ public class GestioneDispositiviElettronici {
                                                 connessioni, "5ollici", true);
 
         System.out.println(mobile);
+
+        Desktop newDe = new Desktop("Hp","512", "Windows10", 680,3500,"900gb", "Intel", "orizzontale");
+        System.out.println(newDe);
+
+        DispositivoElettronico [] elencoDispositivi = {newDe, mobile};
+
+        for (int i=0; i<elencoDispositivi.length; i++){
+
+            System.out.println(elencoDispositivi[i]);
+            elencoDispositivi[i].accendi();
+            elencoDispositivi[i].spegni();
+
+            if (elencoDispositivi[i].getClass()== Smartphone.class){
+                ((Smartphone) elencoDispositivi[i]).rimuoviConnessioni("GSM");
+            }
+
+
+
+        }
+
+
+
     }
 }

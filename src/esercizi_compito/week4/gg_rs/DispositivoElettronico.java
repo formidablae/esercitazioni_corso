@@ -56,4 +56,14 @@ public abstract class DispositivoElettronico {
 
     @Override
     public abstract String toString();
+
+    public void accendi(){
+
+        System.out.println("Accendendo....");
+    }
+
+    public void spegni(){
+
+        System.out.println("Spegnendo...");
+    }
 }

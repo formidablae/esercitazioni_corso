@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc585184-beb2-4622-a239-aaea27f43fad" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/esercizi_compito/week3/dc/GestioneStudenti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_compito/week3/dc/GestioneStudenti.java" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_compito/week4/gg_rs/DispositivoElettronico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_compito/week4/gg_rs/DispositivoElettronico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esercizi_compito/week4/gg_rs/GestioneDispositiviElettronici.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_compito/week4/gg_rs/GestioneDispositiviElettronici.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +46,7 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2sO9aAf6qMZxB1mh0MN6tk3VS3G" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -54,6 +55,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.GestioneDispositiviElettronici.executor": "Run",
     "Application.GestioneVeicoli.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
