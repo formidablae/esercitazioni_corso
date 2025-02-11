@@ -41,6 +41,15 @@ public class GestioneAnimali {
 
         System.out.println(Arrays.toString(animali));
 
+        // scrivi un ciclo for che trova l'animale più vecchio
+        Animale animalePiuVecchio = animali[0];
+        for (int i = 1; i < animali.length; i++) {
+            if (animali[i].getEta() > animalePiuVecchio.getEta()) {
+                animalePiuVecchio = animali[i];
+            }
+        }
+        System.out.println("L'animale più vecchio è: " + animalePiuVecchio.getNome() + " con " + animalePiuVecchio.getEta() + " anni");
+
 
     }
 }
