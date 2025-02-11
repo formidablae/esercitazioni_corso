@@ -1,4 +1,4 @@
-package esercizi_in_lezione.week4.day2;
+package esercizi_in_lezione.week4.day2.pianeta;
 
 public class Main {
     public static void main(String[] args) {
