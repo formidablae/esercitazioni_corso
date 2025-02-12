@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dc585184-beb2-4622-a239-aaea27f43fad" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/esercizi_compito/week4/gg_rs/DispositivoElettronico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_compito/week4/gg_rs/DispositivoElettronico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/esercizi_compito/week4/gg_rs/GestioneDispositiviElettronici.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercizi_compito/week4/gg_rs/GestioneDispositiviElettronici.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +30,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/formidablae/esercitazioni_corso.git&quot;,
-    &quot;accountId&quot;: &quot;6b3285e6-7ebd-4a3e-9ef2-cc678b449102&quot;
+    &quot;url&quot;: &quot;git@github.com:formidablae/esercitazioni_corso.git&quot;,
+    &quot;accountId&quot;: &quot;ea2b876c-1232-45a4-be5c-b20c97250656&quot;
   }
 }</component>
   <component name="MarkdownSettingsMigration">
@@ -55,6 +53,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.GestioneCalcoliGeometrici.executor": "Run",
     "Application.GestioneDispositiviElettronici.executor": "Run",
     "Application.GestioneVeicoli.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -75,7 +74,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="02e3b66e-1731-4c68-ab16-060f38c934e9" name="Changes" comment="" />
+      <changelist id="dc585184-beb2-4622-a239-aaea27f43fad" name="Changes" comment="" />
       <created>1738315815009</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
