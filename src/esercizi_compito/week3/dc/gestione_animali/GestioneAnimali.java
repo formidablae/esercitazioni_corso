@@ -1,4 +1,4 @@
-kage esercizi_compito.week3.dc.gestione_animali;
+package esercizi_compito.week3.dc.gestione_animali;
 
 
 /*
