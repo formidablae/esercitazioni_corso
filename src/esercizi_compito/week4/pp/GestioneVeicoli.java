@@ -11,12 +11,30 @@ package esercizi_compito.week4.pp;
    garage[0] = new Auto("Ford", "Mustang", 5000);
    garage[1] = new Tesla("Model S");
    garage[2] = new Auto("BMW", "M3", 3000);
- per ciascun veicolo, chiamare il qualche metodo
+ per ciascun veicolo, chiamare qualche metodo
  */
 
 
 public class GestioneVeicoli {
     public static void main(String[] args) {
-        //
+        Veicolo[] garage = {
+            new Auto("Ford", "Mustang", 5000),
+            new Tesla("Model S"),
+            new Auto("BMW", "M3", 3000)
+        };
+
+        for (int i = 0; i < garage.length; i++) {
+            if (garage[i] instanceof Motorizzato) {
+                ((Motorizzato) garage[i]).avviaMotore();
+            }
+            if (garage[i] instanceof IElettrico) {
+                ((IElettrico) garage[i]).ricarica();
+            }
+            if (garage[i] instanceof IAutonomo) {
+                ((IAutonomo) garage[i]).guidaAutonoma();
+            }
+
+            System.out.println();
+        }
     }
 }
