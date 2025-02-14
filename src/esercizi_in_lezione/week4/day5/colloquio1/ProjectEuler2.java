@@ -12,6 +12,21 @@ Considerando i termini della sequenza di Fibonacci che non superano quattro mili
  */
 public class ProjectEuler2 {
     public static void main(String[] args) {
-        // scrivere qui la soluzione
+        int maxNumber = 4000000;
+        int previousNumber = 0;
+        int nextNumber = 1;
+        int somma = 0;
+        for (int i = 1; previousNumber <= maxNumber; ++i) {
+            int sum = previousNumber + nextNumber;
+            previousNumber = nextNumber;
+            nextNumber = sum;
+            if (nextNumber % 2 == 0) {
+                somma += nextNumber;
+            }
+            System.out.println("previousNumber: "+ previousNumber);
+            System.out.println("nextNumber: "+ nextNumber);
+        }
+        System.out.println("Somma dei numeri pari di Fibonacci minori di 4 milioni: "+ somma);
+
     }
 }
