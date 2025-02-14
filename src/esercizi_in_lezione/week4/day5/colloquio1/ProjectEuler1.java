@@ -11,5 +11,18 @@ Scrivere un programma Java che trovi la somma di tutti i multipli di 3 o 5 al di
 public class ProjectEuler1 {
     public static void main(String[] args) {
         // scrivere qui la soluzione
+        int multipliDiNumeri = multipliDiNumeri(3, 5, 1000);
+        System.out.println(multipliDiNumeri);
+
+    }
+
+    public static int multipliDiNumeri (int a, int b, int c) {
+        int somma = 0;
+        for (int i = 0; i < c; i++) {
+            if (i % a == 0 || i % b == 0) {
+                somma += i;
+            }
+        }
+        return somma;
     }
 }
