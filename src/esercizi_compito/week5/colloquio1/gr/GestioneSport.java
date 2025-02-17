@@ -49,7 +49,7 @@ Classe di calcio
 Ogni squadra ha 11 giocatori in Classe in calcio
  */
 
-class Sport {
+abstract class Sport {
     int n;
 
     public Sport(int n) {
@@ -60,8 +60,6 @@ class Sport {
         return "Generic Sports";
     }
 
-    // scrivere un getter getNumberOfTeamMembers per n
-
     void getNumberOfTeamMembers(){
         System.out.println( "Ogni squadra ha " +
             // usare il getter per il numero n
@@ -70,13 +68,40 @@ class Sport {
 }
 
 class Calcio extends Sport {
-    public Calcio(int n) {
+    public Calcio() {
         super(11);
     }
 
     @Override
     String getName(){
         return "Soccer Class";
+    }
+
+    // scrivere un get n per n
+    @Override
+    void getNumberOfTeamMembers(){
+        System.out.println( "Ogni squadra ha " +
+            getN() + " giocatori in " + getName() );
+    }
+    int getN(){
+        return n;
+    }
+}
+class Tennis extends Sport {
+    public Tennis() {
+        super(1);
+    }
+
+    @Override
+    String getName(){
+        return "Tennis Class";
+    }
+
+    // scrivere un getter getNumberOfTeamMembers per n
+    @Override
+    void getNumberOfTeamMembers(){
+        System.out.println( "Cada squadra ha " +
+            1 + " giocatori in " + getName() );
     }
 }
 
@@ -88,5 +113,13 @@ public class GestioneSport {
     public static void main(String[] args) {
         // creare un array di Sport con due elementi Calcio e uno Tennis
         // chiamare i metodi getNumberOfTeamMembers per ciascuno
+        Sport[] sport = new Sport[3];
+        sport[0] = new Calcio();
+        sport[1] = new Calcio();
+        sport[2] = new Tennis();
+        sport[0].getNumberOfTeamMembers();
+        sport[1].getNumberOfTeamMembers();
+        sport[2].getNumberOfTeamMembers();
+
     }
 }
