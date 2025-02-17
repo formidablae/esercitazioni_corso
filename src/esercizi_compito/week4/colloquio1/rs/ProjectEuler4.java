@@ -1,4 +1,4 @@
-package esercizi_in_lezione.week4.day5.colloquio1;
+package esercizi_compito.week4.colloquio1.rs;
 
 /*
 https://projecteuler.net/problem=4
