@@ -1,4 +1,4 @@
-package esercizi_in_lezione.week5.day2;
+package esercizi_in_lezione.week5.day2.exception_handling;
 
 import java.util.Scanner;
 

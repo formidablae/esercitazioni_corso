@@ -1,4 +1,4 @@
-package esercizi_in_lezione.week5.day2;
+package esercizi_in_lezione.week5.day2.exception_handling;
 
 class IlMioErroreException extends Exception {
     public IlMioErroreException(String message) {
@@ -42,7 +42,7 @@ class ExceptionPropagation {
             System.out.println("Codice runnato con successo");
         } catch (IlMioSecondoErroreException e) {
             System.out.println("Errore: Divisione per zero intercettata!");
-            System.out.println("unMioCampo dell'errore: " + e.getUnMioCampo());
+            System.out.println("unMioCampo dell'errore:   9" + e.getUnMioCampo());
             // e.printStackTrace();
         }
     }
