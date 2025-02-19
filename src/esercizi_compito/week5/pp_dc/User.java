@@ -1,0 +1,38 @@
+package esercizi_compito.week5.pp_dc;
+
+import java.util.ArrayList;
+
+public class User {
+    private String name;
+    private ArrayList<LibraryBook> borrowedBooks;
+
+    public User(String name) {
+        this.name = name;
+        this.borrowedBooks = new ArrayList<>();
+    }
+
+    public User(String name, ArrayList<LibraryBook> borrowedBooks) {
+        this.name = name;
+        this.borrowedBooks = borrowedBooks;
+    }
+
+    public void borrowBook(LibraryBook book) {
+        borrowedBooks.add(book);
+    }
+
+    public void returnBook(LibraryBook book) {
+        borrowedBooks.remove(book);
+    }
+
+    public boolean hasBorrowedBook(LibraryBook book) {
+        return borrowedBooks.contains(book);
+    }
+
+    public ArrayList<LibraryBook> getBorrowedBooks() {
+        return borrowedBooks;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
