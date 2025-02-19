@@ -1,4 +1,4 @@
-package esercizi_compito.week5.pp;
+package esercizi_compito.week5.pp_xx;
 
 // 1. scrivere un'interfaccia IBookOperations con i seguenti metodi:
 // - displayDetails() che stampa i dettagli del libro
@@ -22,6 +22,41 @@ package esercizi_compito.week5.pp;
 // - "Data Structures in Java", "Alice Brown", "567-890-123"
 // creare un'istanza di Library con tale array
 // 6. cercare un libro in tale Library e gestire eventuali errori con un try-catch
+
+// requisiti aggiuntivi:
+// 7. scrivere una classe User con i seguenti campi:
+// - name (String)
+// - borrowedBooks (ArrayList<LibraryBook>)
+// 8. aggiungere un campo isAvailable (boolean) in LibraryBook che di default prende valore true
+// 9. aggiungere nell'interfaccia IBookOperations i metodi:
+// - borrowBook() che assegna un libro ad un utente (lo aggiunge nell'ArrayList borrowedBooks)
+//   e imposta il isAvailable del libro a false
+// - returnBook() che rimuove un libro da un utente (lo rimuove dall'ArrayList borrowedBooks)
+//   e imposta il isAvailable del libro a true
+// 10. modificare il metodo searchBook in Library in modo che restituisca il libro solo se isAvailable è true
+// 11. modificare il metodo borrowBook in modo che restituisca un errore se il libro non è disponibile
+// 12. modificare il metodo returnBook in modo che restituisca un errore se il libro è già disponibile
+// 13. displayDetails() deve stampare anche se il libro è disponibile o meno
+// 14. aggiungere in Libreria un campo users (ArrayList<User>) inizializato a array vuoto e i metodi:
+// - addUser(User) che aggiunge un utente
+// - removeUser(User) che rimuove un utente
+// - listUserBooks(User) che restituisce un array di LibraryBook presi in prestito da un utente
+// - displayDetails() che stampa i dettagli della libreria e degli utenti
+// 15. Deve essere possibile creare una Libreria sia fornendo un elenco libri e utenti che solo elenco libri
+// 16. nel main di BookManagement aggiungere in libreria altri 5 LibraryBook
+// - "C++ Programming", "John Doe", "123-456-789"
+// - "JavaScript Essentials", "Jane Smith", "987-654-321"
+// - "Algorithms in Java", "Alice Brown", "567-890-123"
+// - "C# Programming", "John Doe", "123-456-789"
+// - "HTML Essentials", "Jane Smith", "987-654-321"
+// 17. nel main di BookManagement creare 3 Users
+// - "Alice"
+// - "Bob"
+// - "Charlie
+// 18. aggiungere gli utenti alla libreria
+// 19. dare alcuni libri in prestito agli utenti
+// 20. controllare se i libri sono disponibili o meno
+// 21. stampare i dettagli della libreria e degli utenti
 
 import java.util.ArrayList;
 

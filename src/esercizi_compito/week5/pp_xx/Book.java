@@ -1,4 +1,4 @@
-package esercizi_compito.week5.pp;
+package esercizi_compito.week5.pp_xx;
 
 public abstract class Book {
     private String title;
