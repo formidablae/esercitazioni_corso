@@ -1,4 +1,6 @@
-package esercizi_compito.week5.pp_dc;
+package esercizi_compito.week5.pp_dc_rs;
+
+import esercizi_compito.week5.pp_dc_rs.exceptions.BookNotAvailableException;
 
 public class LibraryBook extends Book implements IBookOperations{
     private String isbn;
@@ -10,8 +12,12 @@ public class LibraryBook extends Book implements IBookOperations{
         this.isAvailable = true;
     }
 
-    public boolean isAvailable() {
-        return isAvailable;
+    public boolean isAvailable() throws BookNotAvailableException {
+        if(!isAvailable){
+            throw new BookNotAvailableException();
+        }
+
+        return true;
     }
 
     public void setAvailable(boolean available) {

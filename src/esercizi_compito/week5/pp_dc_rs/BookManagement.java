@@ -1,9 +1,11 @@
-package esercizi_compito.week5.pp_dc;
+package esercizi_compito.week5.pp_dc_rs;
+
+import esercizi_compito.week5.pp_dc_rs.exceptions.BookNotAvailableException;
 
 import java.util.ArrayList;
 
 public class BookManagement {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws BookNotAvailableException {
         // scrivere qui la soluzione per il main
         ArrayList<LibraryBook> elencoLibri = new ArrayList<>();
         elencoLibri.add(new LibraryBook("Java Programming", "John Doe", "123-456-789"));

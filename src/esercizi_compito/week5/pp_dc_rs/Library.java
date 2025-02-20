@@ -1,4 +1,6 @@
-package esercizi_compito.week5.pp_dc;
+package esercizi_compito.week5.pp_dc_rs;
+
+import esercizi_compito.week5.pp_dc_rs.exceptions.BookNotAvailableException;
 
 import java.util.ArrayList;
 
@@ -31,34 +33,47 @@ public class Library {
         return null;
     }
 
-    public boolean checkUser (User user){
-        return users.contains(user);
+    public boolean checkUser (User user) throws UserNotExistsException {
+        if(!users.contains(user)){
+            throw new UserNotExistsException();
+
+        }
+
+        return true;
+    }
+
+    public boolean checkBook (LibraryBook libro) throws BookNotExistsException {
+
+        if(!books.contains(libro)){
+            throw new BookNotExistsException();
+
+        }
+        return true;
     }
 
     public void borrowBook(User user, LibraryBook libro) {
         /* try catch controlla se il libro esiste ed è disponibile e l'utente esiste, altrimenti stampa un messaggio significativo*/
         try {
-            if (libro.isAvailable() && checkUser(user)) {
+            if (checkBook(libro) && libro.isAvailable() && checkUser(user)) {
                 user.borrowBook(libro);
                 libro.setAvailable(false);
-            } else { throw new Exception();
             }
-        } catch (Exception e) {
-            System.err.println("Errore: impossibile dare in prestito il libro " +libro.formattedTitle() + " all'utente " + user.getName());
+        } catch (BookNotExistsException | UserNotExistsException e) {
+            System.err.println("Errore: impossibile dare in prestito il libro " +libro.formattedTitle() + " all'utente " + user.getName() + " perchè " + e.getMessage()) ;
         }
+
     }
 
 
 
     public void returnBook(User user, LibraryBook libro) {
         try {
-            if (!libro.isAvailable() && checkUser(user) && user.hasBorrowedBook(libro)) {
+            if (checkBook(libro) && !libro.isAvailable() && checkUser(user) && user.hasBorrowedBook(libro)) {
                 user.returnBook(libro);
                 libro.setAvailable(true);
-            } else { throw new Exception();
             }
-        } catch (Exception e) {
-            System.err.println("Errore: impossibile restituire il libro " + libro.formattedTitle() + " dall'utente " + user.getName());
+        } catch (BookNotExistsException | UserNotExistsException | BookNotAvailableException e) {
+            System.err.println("Errore: impossibile restituire il libro " + libro.formattedTitle() + " dall'utente " + user.getName()+ " perchè " + e.getMessage());
         }
     }
 
