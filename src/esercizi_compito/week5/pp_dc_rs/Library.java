@@ -5,6 +5,7 @@ import esercizi_compito.week5.pp_dc_rs.exceptions.BookNotExistsException;
 import esercizi_compito.week5.pp_dc_rs.exceptions.UserNotExistsException;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Random;
 
 public class Library {
@@ -42,6 +43,12 @@ public class Library {
     }
 
     public void addBook(LibraryBook book) {
+        for (LibraryBook libro : books) {
+            if (libro.getIsbn().equals(book.getIsbn())) {
+                System.out.println("Book " + book.getTitle() + " with same ISBN already exists in Library");
+                return;
+            }
+        }
         books.add(book);
     }
 
@@ -50,7 +57,9 @@ public class Library {
     }
 
     public void addBooks(ArrayList<LibraryBook> books) {
-        this.books.addAll(books);
+        for (LibraryBook book : books) {
+            addBook(book);
+        }
     }
 
     public void removeBooks(ArrayList<LibraryBook> books) {
@@ -124,6 +133,8 @@ public class Library {
         try {
             if (checkBook(libro) && libro.getIsAvailable() && checkUser(user)) {
                 user.borrowBook(libro);
+                LibraryBookBorrowHistoryEntry entry = new LibraryBookBorrowHistoryEntry(user, libro, new Date());
+                LibraryBookBorrowHistory.getInstance().addBorrowEntry(entry);
                 libro.setIsAvailable(false);
             }
         } catch (BookNotExistsException | UserNotExistsException e) {
@@ -134,6 +145,10 @@ public class Library {
     public void returnBook(User user, LibraryBook libro) {
         try {
             if (checkBook(libro) && !libro.getIsAvailable() && checkUser(user) && user.hasBorrowedBook(libro)) {
+                LibraryBookBorrowHistory storico = LibraryBookBorrowHistory.getInstance();
+                ArrayList<LibraryBookBorrowHistoryEntry> storicoDiQuelLibroPerQuellUtente = storico.getBorrowHistoryEntry(user, libro, false);
+                LibraryBookBorrowHistoryEntry entry = storicoDiQuelLibroPerQuellUtente.get(0);
+                entry.setReturnDate(new Date());
                 user.returnBook(libro);
                 libro.setIsAvailable(true);
             }

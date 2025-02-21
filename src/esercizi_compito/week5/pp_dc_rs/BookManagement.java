@@ -9,14 +9,19 @@ public class BookManagement {
 
     public static Library buildAndPopulateLibraryWithBooksAndUsers() {
         ArrayList<LibraryBook> elencoLibri = new ArrayList<>();
-        elencoLibri.add(new LibraryBook("Java Programming", "John Doe", "123-456-789"));
+        elencoLibri.add(new LibraryBook("Java Programming", "John Doe", "123-456-784"));
         elencoLibri.add(new LibraryBook("Python Essentials", "John Doe", "987-654-321"));
-        elencoLibri.add(new LibraryBook("Data Structures in Java", "Alice Brown", "567-890-123"));
-        elencoLibri.add(new LibraryBook("C++ Programming", "John Doe", "123-456-789"));
-        elencoLibri.add(new LibraryBook("JavaScript Essentials", "Jane Smith", "987-654-321"));
-        elencoLibri.add(new LibraryBook("Algorithms in Java", "Alice Brown", "567-890-123"));
+        elencoLibri.add(new LibraryBook("Data Structures in Java", "Alice Brown", "567-894-123"));
+        elencoLibri.add(new LibraryBook("C++ Programming", "John Doe", "123-456-782"));
+        elencoLibri.add(new LibraryBook("JavaScript Essentials", "Jane Smith", "987-91054-321"));
+        elencoLibri.add(new LibraryBook("Algorithms in Java", "Alice Brown", "567-890-623"));
         elencoLibri.add(new LibraryBook("C# Programming", "John Doe", "123-456-789"));
-        elencoLibri.add(new LibraryBook("HTML Essentials", "Jane Smith", "987-654-321"));
+        elencoLibri.add(new LibraryBook("HTML Essentials", "Jane Smith", "989-654-321"));
+        elencoLibri.add(new LibraryBook("Machine Learning in Java", "Alice Brown", "567-890-143"));
+        elencoLibri.add(new LibraryBook("SQL Basics", "John Doe", "123-455-789"));
+        elencoLibri.add(new LibraryBook("CSS Styling", "Jane Smith", "917-654-321"));
+        elencoLibri.add(new LibraryBook("Network Programming", "Alice Brown", "567-890-123"));
+        elencoLibri.add(new LibraryBook("Android Development", "John Doe", "177-456-789"));
 
         ArrayList<User> elencoUtenti = new ArrayList<>();
         elencoUtenti.add(new User("Alice"));
@@ -34,7 +39,7 @@ public class BookManagement {
 
     public static void main(String[] args) throws UserNotExistsException {
         Library libreria = buildAndPopulateLibraryWithBooksAndUsers();
-        libreria.simulateBooksBorrowed(15, 3);
+        libreria.simulateBooksBorrowed(20, 3);
 
         // write a menu to ask user what to do
         // 1. display all books
@@ -46,6 +51,8 @@ public class BookManagement {
         // 7. return a book
         // 8. search a book by title
         // 9. search a book by author
+        // 10. show book borrow history
+        // 11. show borrow history per given book
         // 0. exit
 
         Scanner scanner = new Scanner(System.in);
@@ -61,6 +68,8 @@ public class BookManagement {
             System.out.println("7. return a book");
             System.out.println("8. search a book by title");
             System.out.println("9. search list of books by author");
+            System.out.println("10. show all books borrow history");
+            System.out.println("11. show borrow history per given book");
             System.out.println("0. exit");
 
             choice = scanner.nextInt();
@@ -130,6 +139,17 @@ public class BookManagement {
                     for (LibraryBook b : books) {
                         b.displayDetails();
                     }
+                    break;
+                case 10:
+                    System.out.println("All books borrow history:");
+                    LibraryBookBorrowHistory.getInstance().printBorrowHistory();
+                    break;
+                case 11:
+                    System.out.println("Enter the book title");
+                    bookTitle = scanner.nextLine();
+                    book = libreria.getBookByTitle(bookTitle);
+                    System.out.println("Borrow history for book " + book.getTitle() + ":");
+                    book.getBorrowHistory().forEach(System.out::println);
                     break;
                 case 0:
                     System.out.println("Bye bye");
