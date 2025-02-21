@@ -17,5 +17,5 @@ public abstract class Book {
         return author;
     }
 
-    public abstract String formattedTitle();
+    public abstract String toString();
 }

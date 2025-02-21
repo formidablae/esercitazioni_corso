@@ -4,6 +4,6 @@ public class UserNotExistsException extends Exception {
 
     public UserNotExistsException() {
 
-        super("L'utente non esiste");
+        super("User not found");
     }
 }

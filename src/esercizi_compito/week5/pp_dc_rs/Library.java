@@ -1,12 +1,15 @@
 package esercizi_compito.week5.pp_dc_rs;
 
-import esercizi_compito.week5.pp_dc_rs.exceptions.BookNotAvailableException;
+import esercizi_compito.week5.pp_dc_rs.exceptions.BookNotBorrowedByUserException;
+import esercizi_compito.week5.pp_dc_rs.exceptions.BookNotExistsException;
+import esercizi_compito.week5.pp_dc_rs.exceptions.UserNotExistsException;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Library {
-    ArrayList<LibraryBook> books;
-    ArrayList<User> users;
+    private ArrayList<LibraryBook> books;
+    private ArrayList<User> users;
 
     public Library(ArrayList books) {
         this.books = books;
@@ -22,31 +25,96 @@ public class Library {
         this.users = users;
     }
 
-    public LibraryBook searchBook(String title) {
-        for (LibraryBook libro : books) {
-            if (libro.getTitle().equals(title) && libro.isAvailable()) {
-                return libro;
+    public ArrayList<LibraryBook> getBooks() {
+        return books;
+    }
 
+    public void setBooks(ArrayList<LibraryBook> books) {
+        this.books = books;
+    }
+
+    public ArrayList<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(ArrayList<User> users) {
+        this.users = users;
+    }
+
+    public void addBook(LibraryBook book) {
+        books.add(book);
+    }
+
+    public void removeBook(LibraryBook book) {
+        books.remove(book);
+    }
+
+    public void addBooks(ArrayList<LibraryBook> books) {
+        this.books.addAll(books);
+    }
+
+    public void removeBooks(ArrayList<LibraryBook> books) {
+        this.books.removeAll(books);
+    }
+
+    public void addUsers(ArrayList<User> users) {
+        this.users.addAll(users);
+    }
+
+    public void removeUsers(ArrayList<User> users) {
+        this.users.removeAll(users);
+    }
+
+    public User getUser(String name) throws UserNotExistsException {
+        for (User user : users) {
+            if (user.getName().equals(name)) {
+                return user;
             }
+        }
+        throw new UserNotExistsException();
+    }
 
+    public LibraryBook getBookByTitle(String title) {
+        for (LibraryBook libro : books) {
+            if (libro.getTitle().equals(title)) {
+                return libro;
+            }
         }
         return null;
+    }
+
+    public LibraryBook getBookByTitle(String title, boolean isAvailable) {
+        for (LibraryBook libro : books) {
+            if (libro.getTitle().equals(title) && libro.getIsAvailable() == isAvailable) {
+                return libro;
+            }
+        }
+        return null;
+    }
+
+
+
+    public ArrayList<LibraryBook> getBookByAuthor(String authorName) {
+        ArrayList<LibraryBook> ricerca = new ArrayList<>();
+        for (LibraryBook libro : books) {
+            if (libro.getAuthor().equals(authorName) && libro.getIsAvailable()) {
+                ricerca.add(libro);
+            }
+        }
+        return ricerca;
     }
 
     public boolean checkUser (User user) throws UserNotExistsException {
         if(!users.contains(user)){
             throw new UserNotExistsException();
-
         }
 
         return true;
     }
 
     public boolean checkBook (LibraryBook libro) throws BookNotExistsException {
-
         if(!books.contains(libro)){
             throw new BookNotExistsException();
-
         }
         return true;
     }
@@ -54,26 +122,27 @@ public class Library {
     public void borrowBook(User user, LibraryBook libro) {
         /* try catch controlla se il libro esiste ed è disponibile e l'utente esiste, altrimenti stampa un messaggio significativo*/
         try {
-            if (checkBook(libro) && libro.isAvailable() && checkUser(user)) {
+            if (checkBook(libro) && libro.getIsAvailable() && checkUser(user)) {
                 user.borrowBook(libro);
-                libro.setAvailable(false);
+                libro.setIsAvailable(false);
             }
         } catch (BookNotExistsException | UserNotExistsException e) {
-            System.err.println("Errore: impossibile dare in prestito il libro " +libro.formattedTitle() + " all'utente " + user.getName() + " perchè " + e.getMessage()) ;
+            System.err.println("Errore: impossibile dare in prestito il libro " + libro + " all'utente " + user.getName() + " perchè: " + e.getMessage()) ;
         }
-
     }
-
-
 
     public void returnBook(User user, LibraryBook libro) {
         try {
-            if (checkBook(libro) && !libro.isAvailable() && checkUser(user) && user.hasBorrowedBook(libro)) {
+            if (checkBook(libro) && !libro.getIsAvailable() && checkUser(user) && user.hasBorrowedBook(libro)) {
                 user.returnBook(libro);
-                libro.setAvailable(true);
+                libro.setIsAvailable(true);
             }
-        } catch (BookNotExistsException | UserNotExistsException | BookNotAvailableException e) {
-            System.err.println("Errore: impossibile restituire il libro " + libro.formattedTitle() + " dall'utente " + user.getName()+ " perchè " + e.getMessage());
+        } catch (
+            BookNotExistsException
+            | UserNotExistsException
+            | BookNotBorrowedByUserException e
+        ) {
+            System.err.println("Errore: impossibile restituire il libro " + libro + " dall'utente " + user.getName()+ " perchè: " + e.getMessage());
         }
     }
 
@@ -89,13 +158,7 @@ public class Library {
         return ricerca;
     }
 
-    // - addUser(User) che aggiunge un utente
-// - removeUser(User) che rimuove un utente
-// - listUserBooks(User) che restituisce un array di LibraryBook presi in prestito da un utente
-// - displayDetails() che stampa i dettagli della libreria e degli utenti
-
     public void addUser(User user) {
-        //controlla se l'utente esiste già
         if (users.contains(user)) {
             System.out.println("Errore: utente già esistente");
             return;
@@ -134,6 +197,58 @@ public class Library {
         }
     }
 
+    public void displayBooks() {
+        System.out.println("Tutti i libri:");
+        for (LibraryBook libro : books) {
+            libro.displayDetails();
+        }
+    }
 
+    public void displayUsers() {
+        System.out.println("Tutti gli utenti:");
+        for (User user : users) {
+            System.out.println("Nome: " + user.getName());
+        }
+    }
+
+    public void displayBooksBorrowedByUser(String user) {
+        for (User u : users) {
+            if (u.getName().equals(user)) {
+                System.out.println("Libri presi in prestito da " + user + ":");
+                for (LibraryBook libro : u.getBorrowedBooks()) {
+                    libro.displayDetails();
+                }
+            }
+        }
+    }
+
+    public void displayAllBooksBorrowed() {
+        for (User user : users) {
+            System.out.println("Libri presi in prestito da " + user.getName() + ":");
+            for (LibraryBook libro : user.getBorrowedBooks()) {
+                libro.displayDetails();
+            }
+            System.out.println();
+        }
+    }
+
+    public void displayAllBooksAvailable() {
+        System.out.println("Tutti i libri disponibili:");
+        for (LibraryBook libro : books) {
+                if (!libro.getIsAvailable()) {
+                    continue;
+                }
+                libro.displayDetails();
+        }
+    }
+
+    public void simulateBooksBorrowed(int howMany, int leaveAvailable) {
+        for (int i=0; i < howMany; i++) {
+            this.borrowBook(
+                users.get(new Random().nextInt(users.size())),
+                books.get(new Random().nextInt(books.size() - 3))
+            );
+        }
+    }
 
 }
