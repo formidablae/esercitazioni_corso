@@ -5,7 +5,7 @@ public class BookNotExistsException extends Exception {
 
     public BookNotExistsException() {
 
-       super("Il libro non esiste");
+           super("Book does not exist");
 
     }
 }
