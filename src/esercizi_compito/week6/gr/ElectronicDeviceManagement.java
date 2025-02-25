@@ -1,5 +1,7 @@
 package esercizi_compito.week6.gr;
 
+import java.util.HashSet;
+
 /*
 1. Interfaccia (Powerable)
 Creare un'interfaccia Powerable con i seguenti metodi:
@@ -47,6 +49,40 @@ Rimuovere un dispositivo e ristampare la dimensione del HashSet.
  */
 public class ElectronicDeviceManagement {
     public static void main(String[] args) {
+        Smartphone s1=new Smartphone("samsung", "s20", true);
+        Smartphone s2=new Smartphone("samsung", "s20", true);
+        Laptop l1=new Laptop("samsung", "s20", 8);
+        Laptop l2=new Laptop("oppo", "L4", 32);
+        HashSet<ElectronicDevice> devices=new HashSet<>();
+        devices.add(s1);
+        devices.add(s2);
+        devices.add(l1);
+        devices.add(l2);
+        System.out.println(devices.size());
 
+        testInstanceof(s1);
+        testInstanceof(s2);
+        testInstanceof(l1);
+        testInstanceof(l2);
+        testInstanceof(null);
+
+        for (ElectronicDevice d: devices) {
+            d.turnOn();
+
+        }
+        devices.remove(s1);
+        System.out.println(devices.size());
+    }
+    public static void testInstanceof(ElectronicDevice d){
+        if (d instanceof Smartphone){
+            System.out.println("È uno smartphone.");
+        } else if (d instanceof Laptop){
+            System.out.println("È un laptop.");
+        } else if (d instanceof ElectronicDevice){
+            System.out.println("È un dispositivo elettronico generico.");
+        } else {
+            System.out.println("L'oggetto è null o non è un dispositivo elettronico.");
+        }
     }
 }
+
