@@ -1,6 +1,8 @@
 package esercizi_compito.week6.dc_pp;
 
 
+import java.util.ArrayList;
+
 /*
 1. Creare una classe Persona con attributi nome e cognome.
 2. Creare una sottoclasse Studente che estende Persona e aggiunge matricola e corsiIscritti (lista di corsi, scegliere il tipo che si ritiene più opportuno).
@@ -17,6 +19,28 @@ Nel main:
  */
 public class GestioneUniversita {
     public static void main(String[] args) {
-        //
+        Universita universita = new Universita();
+        Corso corso = new Corso("1", "Informatica");
+
+        universita.corsi.put(corso.codice, corso);
+        Studente studente = new Studente("Mario", "Rossi", "123", new ArrayList<Corso>());
+        universita.studenti.put(studente.matricola, studente);
+        universita.aggiungiStudenteACorso(studente, corso);
+        System.out.println(corso.studentiIscritti);
+
+        universita.rimuoviStudenteDaCorso(studente, corso);
+        System.out.println(corso.studentiIscritti);
+
+        //cercare uno studente per matricola
+        Studente studenteTrovato = universita.cercaStudente("123");
+        System.out.println(studenteTrovato);
+
+
+
+
+
+
+
+
     }
 }
