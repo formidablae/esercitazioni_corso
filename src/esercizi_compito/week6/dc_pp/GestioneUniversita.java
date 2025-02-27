@@ -46,7 +46,8 @@ pp
 public class GestioneUniversita {
     public static void main(String[] args) {
         Universita universita = new Universita();
-        Corso corso = new Corso("1", "Informatica");
+        Docente docenteInformatica = new Docente("Mario", "Rossi", "Informatica");
+        Corso corso = new Corso("1", "Informatica", docenteInformatica);
 
         universita.corsi.put(corso.codice, corso);
         Studente studente = new Studente("Mario", "Rossi", "123", new ArrayList<Corso>());
