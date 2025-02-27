@@ -15,4 +15,17 @@ public class Docente extends Persona {
     public void aggiungiCorso(Corso corso) {
         corsiInsegnati.add(corso);
     }
+
+    public String getDipartimentoDiAppartenenza() {
+        return dipartimentoDiAppartenenza;
+    }
+
+    @Override
+    public String toString() {
+        return "Docente{" +
+                "nome='" + nome + '\'' +
+                ", cognome='" + cognome + '\'' +
+                ", dipartimentoDiAppartenenza='" + dipartimentoDiAppartenenza + '\'' +
+                '}';
+    }
 }

@@ -46,28 +46,63 @@ pp
 public class GestioneUniversita {
     public static void main(String[] args) {
         Universita universita = new Universita();
-        Docente docenteInformatica = new Docente("Mario", "Rossi", "Informatica");
-        Corso corso = new Corso("1", "Informatica", docenteInformatica);
+        Docente docente1 = new Docente("Mario", "Rossi", "Informatica");
+        Docente docente2 = new Docente("Giovanni", "Bianchi", "Ingegneria");
 
-        universita.corsi.put(corso.codice, corso);
-        Studente studente = new Studente("Mario", "Rossi", "123", new ArrayList<Corso>());
-        universita.studenti.put(studente.matricola, studente);
-        universita.aggiungiStudenteACorso(studente, corso);
-        System.out.println(corso.studentiIscritti);
+        universita.aggiungiDocente(docente1);
+        //System.out.println(universita);
+        universita.aggiungiDocente(docente2);
+        //System.out.println(universita);
 
-        universita.rimuoviStudenteDaCorso(studente, corso);
-        System.out.println(corso.studentiIscritti);
+        Corso c1 = new Corso("CS100", "Informatica", docente1);
+        Corso c2 = new Corso("CS101", "Algoritmi", docente1);
+        Corso c3 = new Corso("CS102", "Reti", docente2);
+
+
+        universita.corsi.put(c1.codice, c1);
+        // universita.corsi.put(c2.codice, c2);
+        // universita.corsi.put(c3.codice, c3);
+
+        Studente studente1 = new Studente("Mario", "Rossi", "1001", new ArrayList<Corso>());
+        Studente studente2 = new Studente("Luca", "Bianchi", "1002", new ArrayList<Corso>());
+        Studente studente3 = new Studente("Anna", "Verdi", "1003", new ArrayList<Corso>());
+
+        universita.studenti.put(studente1.matricola, studente1);
+        universita.studenti.put(studente2.matricola, studente2);
+        universita.studenti.put(studente3.matricola, studente3);
+
+        universita.aggiungiStudenteACorso(studente1, c1);
+        universita.aggiungiStudenteACorso(studente2, c1);
+        universita.aggiungiStudenteACorso(studente3, c1);
+        // universita.aggiungiStudenteACorso(studente1, c2);
+        // universita.aggiungiStudenteACorso(studente3, c3);
+
+        //System.out.println(universita);
+
+        System.out.println(c1.studentiIscritti);
+
+        universita.rimuoviStudenteDaCorso(studente1, c1);
+        System.out.println(c1.studentiIscritti);
 
         //cercare uno studente per matricola
-        Studente studenteTrovato = universita.cercaStudente("123");
+        Studente studenteTrovato = universita.cercaStudente("1001");
         System.out.println(studenteTrovato);
 
+        System.out.println(universita);
 
+        Studente studente4 = new Studente("Anna", "Verdi", "1004", new ArrayList<Corso>());
+        Studente studente5 = new Studente("Anna", "Verdi", "1005", new ArrayList<Corso>());
 
+        universita.studenti.put(studente4.matricola, studente4);
+        universita.studenti.put(studente5.matricola, studente5);
 
+        universita.aggiungiStudenteACorso(studente4, c1);
+        universita.aggiungiStudenteACorso(studente5, c1);
 
+        System.out.println(universita);
 
+        universita.rimuoviStudenteDaCorso(studente2, c1);
 
-
+        System.out.println(universita);
     }
 }
