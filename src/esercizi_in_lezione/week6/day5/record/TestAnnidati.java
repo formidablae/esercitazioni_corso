@@ -1,4 +1,4 @@
-package esercizi_in_lezione.week6.day5;
+package esercizi_in_lezione.week6.day5.record;
 
 record Indirizzo(String via, String citta, String cap) {}
 

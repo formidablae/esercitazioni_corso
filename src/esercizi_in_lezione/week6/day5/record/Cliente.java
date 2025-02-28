@@ -1,4 +1,4 @@
-package esercizi_in_lezione.week6.day5;
+package esercizi_in_lezione.week6.day5.record;
 
 import java.util.Objects;
 
