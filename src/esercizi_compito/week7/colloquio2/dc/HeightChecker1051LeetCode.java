@@ -24,9 +24,17 @@ public class HeightChecker1051LeetCode {
         System.out.println("h3: " + Arrays.toString(heights3) + "; Risultato: " + solve(heights3));
     }
 
-    public static int solve(int[] heights){
+    public static int solve(int[] heights) {
         // todo
-        return 0;
+        int contatore = 0;
+        int[] arrayOrdinato = Arrays.copyOf(heights, heights.length);
+        Arrays.sort(arrayOrdinato);
+        for (int i = 0; i < arrayOrdinato.length; i++) {
+            if (arrayOrdinato[i] != heights[i]) {
+                contatore += 1;
+            }
+        }
+        System.out.println("Array ordinato: " + Arrays.toString(arrayOrdinato));
+        return contatore;
     }
-
 }
