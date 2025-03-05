@@ -38,23 +38,7 @@ public class Universita {
             Files.createDirectories(Paths.get(pathToProject));
         }
 
-        /*
-        List<String> righePersone = new ArrayList<>();
-        for (Persona p : persone.values()) {
-            righePersone.add(p.toCSV());
-        }
-        Files.write(Paths.get(pathToProject + "/persone.csv"), righePersone, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
-        */
-
         FileManager.salvaDati(pathToProject + "/persone.json", persone);
-
-        /*
-        List<String> righeCorsi = new ArrayList<>();
-        for (Corso c : corsi.values()) {
-            righeCorsi.add(c.toCSV());
-        }
-        Files.write(Paths.get(pathToProject + "/corsi.csv"), righeCorsi, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
-        */
         FileManager.salvaDati(pathToProject + "/corsi.json", corsi);
     }
 
