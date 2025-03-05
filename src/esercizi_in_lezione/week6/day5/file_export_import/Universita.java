@@ -1,8 +1,13 @@
 package esercizi_in_lezione.week6.day5.file_export_import;
 
-import java.io.*;
-import java.nio.file.*;
-import java.util.*;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.IOException;
+import java.lang.reflect.Type;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Universita {
     private String nome;
@@ -28,43 +33,44 @@ public class Universita {
     }
 
     public void salvaDati() throws IOException {
-        String pathToProject = "src/esercizi_in_lezione/week6/day5/file_export_import/export/";
-        if (!Files.exists(Paths.get(pathToProject + nome))) {
-            Files.createDirectories(Paths.get(pathToProject + nome));
+        String pathToProject = "src/esercizi_in_lezione/week6/day5/file_export_import/export/" + nome;
+        if (!Files.exists(Paths.get(pathToProject))) {
+            Files.createDirectories(Paths.get(pathToProject));
         }
 
+        /*
         List<String> righePersone = new ArrayList<>();
         for (Persona p : persone.values()) {
             righePersone.add(p.toCSV());
         }
-        Files.write(Paths.get(pathToProject + nome + "/persone.csv"), righePersone, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
+        Files.write(Paths.get(pathToProject + "/persone.csv"), righePersone, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
+        */
 
+        FileManager.salvaDati(pathToProject + "/persone.json", persone);
+
+        /*
         List<String> righeCorsi = new ArrayList<>();
         for (Corso c : corsi.values()) {
             righeCorsi.add(c.toCSV());
         }
-        Files.write(Paths.get(pathToProject + nome + "/corsi.csv"), righeCorsi, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
+        Files.write(Paths.get(pathToProject + "/corsi.csv"), righeCorsi, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
+        */
+        FileManager.salvaDati(pathToProject + "/corsi.json", corsi);
     }
 
     public void caricaDati() throws IOException {
         String pathToProject = "src/esercizi_in_lezione/week6/day5/file_export_import/export/" + nome + "/";
-        Path pathPersone = Paths.get(pathToProject + "persone.csv");
-        Path pathCorsi = Paths.get(pathToProject + "corsi.csv");
 
-        if (Files.exists(pathPersone)) {
-            List<String> righePersone = Files.readAllLines(pathPersone);
-            for (String riga : righePersone) {
-                Persona p = Persona.personaFromCSV(riga);
-                persone.put(p.getId(), p);
-            }
+        Type personeType = new TypeToken<Map<String, Persona>>() {}.getType();
+        Map<String, Persona> loadedPersone = FileManager.caricaDati(pathToProject + "persone.json", personeType);
+        if (loadedPersone != null) {
+            persone = loadedPersone;
         }
 
-        if (Files.exists(pathCorsi)) {
-            List<String> righeCorsi = Files.readAllLines(pathCorsi);
-            for (String riga : righeCorsi) {
-                Corso c = Corso.corsoFromCSV(riga);
-                corsi.put(c.getId(), c);
-            }
+        Type corsiType = new TypeToken<Map<String, Corso>>() {}.getType();
+        Map<String, Corso> loadedCorsi = FileManager.caricaDati(pathToProject + "corsi.json", corsiType);
+        if (loadedCorsi != null) {
+            corsi = loadedCorsi;
         }
     }
 

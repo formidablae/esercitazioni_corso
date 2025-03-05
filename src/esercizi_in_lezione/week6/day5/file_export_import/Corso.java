@@ -1,5 +1,8 @@
 package esercizi_in_lezione.week6.day5.file_export_import;
 
+import com.google.gson.*;
+
+import java.lang.reflect.Type;
 import java.util.HashMap;
 
 public class Corso {
@@ -38,6 +41,19 @@ public class Corso {
 
     @Override
     public String toString() {
+        // TODO: fornire info aggiuntive
+        // eventualmente docente
+        // eventualmente più info (elenco studenti)
         return "Corso [id=" + id + ", nome=" + nome + "]";
+    }
+}
+
+class CorsoAdapter implements JsonDeserializer<Corso> {
+    @Override
+    public Corso deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
+        JsonObject jsonObject = json.getAsJsonObject();
+        String id = jsonObject.get("id").getAsString();
+        String nome = jsonObject.get("nome").getAsString();
+        return new Corso(id, nome);
     }
 }

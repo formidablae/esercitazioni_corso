@@ -1,0 +1,82 @@
+{
+  "51": {
+    "id": "51",
+    "nome": "Programmazione Java"
+  },
+  "52": {
+    "id": "52",
+    "nome": "Fondamenti di Python"
+  },
+  "53": {
+    "id": "53",
+    "nome": "Introduzione a C++"
+  },
+  "54": {
+    "id": "54",
+    "nome": "Sviluppo Web con HTML e CSS"
+  },
+  "55": {
+    "id": "55",
+    "nome": "JavaScript Avanzato"
+  },
+  "56": {
+    "id": "56",
+    "nome": "Sicurezza Informatica"
+  },
+  "57": {
+    "id": "57",
+    "nome": "Machine Learning con Python"
+  },
+  "58": {
+    "id": "58",
+    "nome": "Introduzione a SQL"
+  },
+  "59": {
+    "id": "59",
+    "nome": "Sviluppo di App Mobile con Flutter"
+  },
+  "60": {
+    "id": "60",
+    "nome": "Data Science con R"
+  },
+  "61": {
+    "id": "61",
+    "nome": "Gestione del Progetto con Agile"
+  },
+  "62": {
+    "id": "62",
+    "nome": "Sviluppo con React"
+  },
+  "63": {
+    "id": "63",
+    "nome": "Algoritmi e Strutture Dati"
+  },
+  "64": {
+    "id": "64",
+    "nome": "Intelligenza Artificiale con TensorFlow"
+  },
+  "65": {
+    "id": "65",
+    "nome": "Introduzione a Docker e Kubernetes"
+  },
+  "66": {
+    "id": "66",
+    "nome": "DevOps e Continuous Integration"
+  },
+  "67": {
+    "id": "67",
+    "nome": "Sviluppo di videogiochi con Unity"
+  },
+  "68": {
+    "id": "68",
+    "nome": "Python per l'analisi dei dati"
+  },
+  "69": {
+    "id": "69",
+    "nome": "Programmazione funzionale con Scala"
+  },
+  "70": {
+    "id": "70",
+    "nome": "Networking e Protocollo TCP/IP"
+  }
+}

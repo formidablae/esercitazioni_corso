@@ -1,5 +1,8 @@
 package esercizi_in_lezione.week6.day5.file_export_import;
 
+import com.google.gson.*;
+
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -8,11 +11,13 @@ public abstract class Persona {
     protected String id;
     protected String nome;
     protected String cognome;
+    protected String tipo;
 
     public Persona(String id, String nome, String cognome) {
         this.id = id;
         this.nome = nome;
         this.cognome = cognome;
+        this.tipo = this.getClass().getSimpleName();
     }
 
     public String getId() {
@@ -70,11 +75,29 @@ public abstract class Persona {
 
 }
 
+class PersonaAdapter implements JsonDeserializer<Persona> {
+    @Override
+    public Persona deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
+        JsonObject jsonObject = json.getAsJsonObject();
+        String tipo = jsonObject.get("tipo").getAsString();
+
+        // Depending on the "tipo", create either a Studente or Docente object
+        if ("Studente".equals(tipo)) {
+            return context.deserialize(json, Studente.class);
+        } else if ("Docente".equals(tipo)) {
+            return context.deserialize(json, Docente.class);
+        } else {
+            throw new JsonParseException("Unknown type: " + tipo);
+        }
+    }
+}
+
 class Studente extends Persona {
     private List<String> corsiIscritti = new ArrayList<>();
 
     public Studente(String id, String nome, String cognome) {
         super(id, nome, cognome);
+        this.tipo = "Studente";
     }
 
     public void iscriviCorso(String corsoId) {
@@ -83,7 +106,7 @@ class Studente extends Persona {
 
     @Override
     public String toCSV() {
-        return String.format("%s,%s,%s,Studente,%s", id, nome, cognome, String.join(";", corsiIscritti));
+        return String.format("%s,%s,%s,$s,%s", id, nome, cognome, tipo, String.join(";", corsiIscritti));
     }
 
     @Override
@@ -102,6 +125,7 @@ class Docente extends Persona {
 
     public Docente(String id, String nome, String cognome) {
         super(id, nome, cognome);
+        this.tipo = "Docente";
     }
 
     public void assegnaCorso(String corsoId) {
@@ -110,7 +134,7 @@ class Docente extends Persona {
 
     @Override
     public String toCSV() {
-        return String.format("%s,%s,%s,Docente,%s", id, nome, cognome, String.join(";", corsiInsegnati));
+        return String.format("%s,%s,%s,%s,%s", id, nome, cognome, tipo, String.join(";", corsiInsegnati));
     }
 
     @Override

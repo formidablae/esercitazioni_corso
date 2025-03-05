@@ -1,0 +1,255 @@
+{
+  "101": {
+    "corsiIscritti": [
+      "51"
+    ],
+    "id": "101",
+    "nome": "Mario",
+    "cognome": "Rossi",
+    "tipo": "Studente"
+  },
+  "102": {
+    "corsiIscritti": [
+      "52",
+      "54"
+    ],
+    "id": "102",
+    "nome": "Luca",
+    "cognome": "Bianchi",
+    "tipo": "Studente"
+  },
+  "103": {
+    "corsiIscritti": [
+      "53",
+      "57",
+      "59"
+    ],
+    "id": "103",
+    "nome": "Giulia",
+    "cognome": "Verdi",
+    "tipo": "Studente"
+  },
+  "104": {
+    "corsiIscritti": [
+      "55",
+      "60"
+    ],
+    "id": "104",
+    "nome": "Andrea",
+    "cognome": "Ferrari",
+    "tipo": "Studente"
+  },
+  "105": {
+    "corsiIscritti": [
+      "57",
+      "63",
+      "70"
+    ],
+    "id": "105",
+    "nome": "Francesca",
+    "cognome": "Galli",
+    "tipo": "Studente"
+  },
+  "106": {
+    "corsiIscritti": [
+      "58",
+      "61"
+    ],
+    "id": "106",
+    "nome": "Marco",
+    "cognome": "Romano",
+    "tipo": "Studente"
+  },
+  "107": {
+    "corsiIscritti": [
+      "52",
+      "66"
+    ],
+    "id": "107",
+    "nome": "Sara",
+    "cognome": "Lombardi",
+    "tipo": "Studente"
+  },
+  "108": {
+    "corsiIscritti": [
+      "64"
+    ],
+    "id": "108",
+    "nome": "Paolo",
+    "cognome": "Ricci",
+    "tipo": "Studente"
+  },
+  "109": {
+    "corsiIscritti": [
+      "55",
+      "68"
+    ],
+    "id": "109",
+    "nome": "Giovanni",
+    "cognome": "Simeoni",
+    "tipo": "Studente"
+  },
+  "110": {
+    "corsiIscritti": [
+      "60",
+      "69"
+    ],
+    "id": "110",
+    "nome": "Martina",
+    "cognome": "D'Angelo",
+    "tipo": "Studente"
+  },
+  "111": {
+    "corsiIscritti": [
+      "51",
+      "58"
+    ],
+    "id": "111",
+    "nome": "Giuseppe",
+    "cognome": "Martini",
+    "tipo": "Studente"
+  },
+  "112": {
+    "corsiIscritti": [
+      "53"
+    ],
+    "id": "112",
+    "nome": "Alice",
+    "cognome": "Pellegrini",
+    "tipo": "Studente"
+  },
+  "113": {
+    "corsiIscritti": [
+      "66",
+      "70"
+    ],
+    "id": "113",
+    "nome": "Elena",
+    "cognome": "Conti",
+    "tipo": "Studente"
+  },
+  "114": {
+    "corsiIscritti": [
+      "59",
+      "65"
+    ],
+    "id": "114",
+    "nome": "Giulio",
+    "cognome": "Moretti",
+    "tipo": "Studente"
+  },
+  "115": {
+    "corsiIscritti": [
+      "57",
+      "64"
+    ],
+    "id": "115",
+    "nome": "Claudia",
+    "cognome": "Baldini",
+    "tipo": "Studente"
+  },
+  "116": {
+    "corsiIscritti": [
+      "61",
+      "62"
+    ],
+    "id": "116",
+    "nome": "Riccardo",
+    "cognome": "Fontana",
+    "tipo": "Studente"
+  },
+  "901": {
+    "corsiInsegnati": [
+      "51"
+    ],
+    "id": "901",
+    "nome": "Giovanni",
+    "cognome": "Brambilla",
+    "tipo": "Docente"
+  },
+  "902": {
+    "corsiInsegnati": [
+      "52"
+    ],
+    "id": "902",
+    "nome": "Alessandro",
+    "cognome": "Santoro",
+    "tipo": "Docente"
+  },
+  "903": {
+    "corsiInsegnati": [
+      "53"
+    ],
+    "id": "903",
+    "nome": "Simona",
+    "cognome": "Marino",
+    "tipo": "Docente"
+  },
+  "904": {
+    "corsiInsegnati": [
+      "55"
+    ],
+    "id": "904",
+    "nome": "Luigi",
+    "cognome": "Esposito",
+    "tipo": "Docente"
+  },
+  "905": {
+    "corsiInsegnati": [
+      "57"
+    ],
+    "id": "905",
+    "nome": "Anna",
+    "cognome": "Rossi",
+    "tipo": "Docente"
+  },
+  "906": {
+    "corsiInsegnati": [
+      "58"
+    ],
+    "id": "906",
+    "nome": "Francesco",
+    "cognome": "Giordano",
+    "tipo": "Docente"
+  },
+  "907": {
+    "corsiInsegnati": [
+      "66",
+      "70"
+    ],
+    "id": "907",
+    "nome": "Chiara",
+    "cognome": "Bernardi",
+    "tipo": "Docente"
+  },
+  "908": {
+    "corsiInsegnati": [
+      "64"
+    ],
+    "id": "908",
+    "nome": "Paola",
+    "cognome": "Vitali",
+    "tipo": "Docente"
+  },
+  "909": {
+    "corsiInsegnati": [
+      "62",
+      "67"
+    ],
+    "id": "909",
+    "nome": "Roberto",
+    "cognome": "Coppola",
+    "tipo": "Docente"
+  },
+  "910": {
+    "corsiInsegnati": [
+      "63",
+      "68",
+      "69"
+    ],
+    "id": "910",
+    "nome": "Giulia",
+    "cognome": "Toscano",
+    "tipo": "Docente"
+  }
+}
