@@ -92,58 +92,5 @@ class PersonaAdapter implements JsonDeserializer<Persona> {
     }
 }
 
-class Studente extends Persona {
-    private List<String> corsiIscritti = new ArrayList<>();
 
-    public Studente(String id, String nome, String cognome) {
-        super(id, nome, cognome);
-        this.tipo = "Studente";
-    }
 
-    public void iscriviCorso(String corsoId) {
-        corsiIscritti.add(corsoId);
-    }
-
-    @Override
-    public String toCSV() {
-        return String.format("%s,%s,%s,$s,%s", id, nome, cognome, tipo, String.join(";", corsiIscritti));
-    }
-
-    @Override
-    public String toString() {
-        return "Studente{" +
-            "id='" + id + '\'' +
-            ", nome='" + nome + '\'' +
-            ", cognome='" + cognome + '\'' +
-            ", corsiIscritti=" + corsiIscritti +
-            '}';
-    }
-}
-
-class Docente extends Persona {
-    private List<String> corsiInsegnati = new ArrayList<>();
-
-    public Docente(String id, String nome, String cognome) {
-        super(id, nome, cognome);
-        this.tipo = "Docente";
-    }
-
-    public void assegnaCorso(String corsoId) {
-        corsiInsegnati.add(corsoId);
-    }
-
-    @Override
-    public String toCSV() {
-        return String.format("%s,%s,%s,%s,%s", id, nome, cognome, tipo, String.join(";", corsiInsegnati));
-    }
-
-    @Override
-    public String toString() {
-        return "Docente{" +
-            "id='" + id + '\'' +
-            ", nome='" + nome + '\'' +
-            ", cognome='" + cognome + '\'' +
-            ", corsiInsegnati=" + corsiInsegnati +
-            '}';
-    }
-}

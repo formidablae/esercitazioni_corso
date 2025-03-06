@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -62,6 +63,10 @@ public class Universita {
         return persone.get(id);
     }
 
+    public Corso getCorso(String id) {
+        return corsi.get(id);
+    }
+
     public void mostraInformazioni() {
         System.out.println("Università: " + nome);
         System.out.println("\n--- Persone ---");
@@ -72,5 +77,17 @@ public class Universita {
         for (Corso c : corsi.values()) {
             System.out.println(c);
         }
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public ArrayList<Persona> getPersone() {
+        return new ArrayList<>(persone.values());
+    }
+
+    public ArrayList<Corso> getCorsi() {
+        return new ArrayList<>(corsi.values());
     }
 }
