@@ -1,10 +1,11 @@
-package esercizi_compito.week7.dc2;
+package esercizi_compito.week7.dc2_pp;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 /*
+dc2
 Scrivere dei test per verificare che:
 - un utente venga aggiunto correttamente.
 - un utente venga rimosso correttamente.
@@ -13,6 +14,19 @@ Scrivere dei test per verificare che:
 - la verificaEsistenzaUtente di un utente non esistente ritorni false.
 - quando aggiungo 3 utenti diversi, la lista degli utenti deve contenere 3 utenti diversi.
 - quando aggiungo 3 utenti di cui 2 sono unici, la lista degli utenti deve contenere 2 utenti diversi.
+
+pp
+Scrivere dei test per verificare che:
+- se aggiornaUtente viene chiamato Maria con Mario, Maria viene rimossa e Mario viene aggiunto.
+- se aggiornaUtente viene chiamato Mario con Mario, Mario non viene rimosso e non viene aggiunto.
+- se aggiornaUtente viene chiamato Maria con Mario ma Mario esiste già elenco, Maria non viene rimossa e Mario rimane in elenco.
+- se ho in elenco Mario, Maria e Giuseppe, utenteConNomePiuLungo deve restituire Giuseppe.
+- se ho in elenco Mario, Maria e Luca, utenteConNomePiuLungo deve restituire Mario o Maria.
+- se chiamo formattaNome con "mario" deve restituire "Mario".
+- se chiamo formattaNome con "mario rossi" deve restituire "Mario Rossi".
+- se chiamo formattaNome con "mario rossi bianchi" deve restituire "Mario Rossi Bianchi".
+- se chiamo formattaNome con "mAriO" deve restituire "Mario".
+- se aggiungoUtente con "mario", viene aggiunto un utente "Mario". (scrivere questo test dopo testAggiungiUtente)
  */
 
 class GestoreUtentiTest {
