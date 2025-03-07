@@ -2,6 +2,8 @@ package esercizi_compito.week7.dc2_pp;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.HashSet;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /*
@@ -38,6 +40,12 @@ class GestoreUtentiTest {
     void testAggiungiUtente() {
         assertFalse(gestoreUtenti.getUtenti().contains("Mario"));
         gestoreUtenti.aggiungiUtente("Mario");
+        assertTrue(gestoreUtenti.getUtenti().contains("Mario"));
+    }
+
+    @Test
+    void testAggiungiUtente2() {
+        gestoreUtenti.aggiungiUtente("mario");
         assertTrue(gestoreUtenti.getUtenti().contains("Mario"));
     }
 
@@ -118,4 +126,74 @@ class GestoreUtentiTest {
         assertEquals(2, gestoreUtenti.getUtenti().size());
     }
 
+    @Test
+    void aggiornaUtente() {
+        gestoreUtenti.aggiungiUtente("Maria");
+        gestoreUtenti.aggiornaUtente("Maria", "Mario");
+        assertFalse(gestoreUtenti.getUtenti().contains("Maria"));
+        assertTrue(gestoreUtenti.getUtenti().contains("Mario"));
+    }
+
+    @Test
+    void aggiornaUtente2() {
+        gestoreUtenti.aggiungiUtente("Mario");
+        gestoreUtenti.aggiornaUtente("Mario", "Mario");
+        assertTrue(gestoreUtenti.getUtenti().contains("Mario"));
+    }
+
+    @Test
+    void aggiornaUtente3() {
+        gestoreUtenti.aggiungiUtente("Mario");
+        gestoreUtenti.aggiungiUtente("Maria");
+        gestoreUtenti.aggiornaUtente("Maria", "Mario");
+        assertTrue(gestoreUtenti.getUtenti().contains("Mario"));
+        assertTrue(gestoreUtenti.getUtenti().contains("Maria"));
+    }
+
+    @Test
+    void utenteConNomePiuLungo() {
+        gestoreUtenti.aggiungiUtente("Mario");
+        gestoreUtenti.aggiungiUtente("Maria");
+        gestoreUtenti.aggiungiUtente("Giuseppe");
+        assertEquals("Giuseppe", gestoreUtenti.utenteConNomePiuLungo());
+    }
+
+    @Test
+    void utenteConNomePiuLungo2() {
+        gestoreUtenti.aggiungiUtente("Mario");
+        gestoreUtenti.aggiungiUtente("Maria");
+        gestoreUtenti.aggiungiUtente("Luca");
+        HashSet<String> risposteAccettate = new HashSet<>();
+        risposteAccettate.add("Mario");
+        risposteAccettate.add("Maria");
+        assertTrue(risposteAccettate.contains(gestoreUtenti.utenteConNomePiuLungo()));
+    }
+
+    @Test
+    void formattaNomeTest() {
+        String actual = gestoreUtenti.formattaNome("mario");
+        String expected = "Mario";
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void formattaNomeTest2() {
+        String actual = gestoreUtenti.formattaNome("mario rossi");
+        String expected = "Mario Rossi";
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void formattaNomeTest3() {
+        String actual = gestoreUtenti.formattaNome("mario rossi bianchi");
+        String expected = "Mario Rossi Bianchi";
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void formattaNomeTest4() {
+        String actual = gestoreUtenti.formattaNome("mAriO");
+        String expected = "Mario";
+        assertEquals(expected, actual);
+    }
 }
