@@ -32,4 +32,17 @@ public class Order {
     public String getOrderId() {
         return orderId;
     }
+
+    public boolean getIsCompleted() {
+        return isCompleted;
+    }
+
+    public Product getProduct(String productId) {
+        for (Product product : products) {
+            if (product.getProductId().equals(productId)) {
+                return product;
+            }
+        }
+        return null;
+    }
 }

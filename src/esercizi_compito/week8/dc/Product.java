@@ -24,4 +24,13 @@ public class Product {
     public void increaseStock(int quantity) {
         stockQuantity += quantity;
     }
+
+    public int getStockQuantity() {
+        return stockQuantity;
+    }
+
+    public String getProductId() {
+        return productId;
+    }
+
 }

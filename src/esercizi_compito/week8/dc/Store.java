@@ -1,5 +1,6 @@
 package esercizi_compito.week8.dc;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Store {
@@ -7,13 +8,17 @@ public class Store {
     private List<Order> orders;
 
     public Store() {
-        this.inventory = List.of();
-        this.orders = List.of();
+        this.inventory = new ArrayList<>();
+        this.orders = new ArrayList<>();
     }
 
     public Store(List<Product> inventory, List<Order> orders) {
         this.inventory = inventory;
         this.orders = orders;
+    }
+
+    public List<Product> getInventory() {
+        return inventory;
     }
 
     public void addProduct(Product product) {
@@ -30,7 +35,7 @@ public class Store {
     }
 
     // TODO: dc 4: testare questa funzione
-    public Order getOrder(int orderId) {
+    public Order getOrder(String orderId) {
         for (Order order : orders) {
             if (order.getOrderId().equals(orderId)) {
                 return order;
