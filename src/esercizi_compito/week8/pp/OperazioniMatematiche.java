@@ -1,5 +1,8 @@
 package esercizi_compito.week8.pp;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
+
 /**
  * 1. Creare un metodo che sommi due numeri di tipo BigInteger.
  * Il metodo deve restituire il risultato come BigInteger.
@@ -20,4 +23,21 @@ package esercizi_compito.week8.pp;
  */
 public class OperazioniMatematiche {
     // TODO: implementare i metodi richiesti
+    public static BigInteger sommaBigInteger(BigInteger big1, BigInteger big2) {
+        return big1.add(big2);
+    }
+
+    public static BigDecimal moltiplicaBigDecimal(BigDecimal big1, BigDecimal big2) {
+        return big1.multiply(big2);
+    }
+
+    public static double radiceQuadrata(double num1) {
+        return Math.sqrt(num1);
+    }
+
+    public static int maggiore(int num1, int num2) {
+        return (num1 > num2) ? num1 : num2;
+    }
+
+
 }
