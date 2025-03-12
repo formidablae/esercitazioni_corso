@@ -1,5 +1,9 @@
 package esercizi_compito.week8.dc2;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.math.RoundingMode;
+
 /*
 1. scrivere una funzione static calcolaInteresse(...) che:
 - prende in input un BigInteger capitale,
@@ -60,5 +64,54 @@ dato importo capitale del mutuo, tasso di interesse e numero di anni:
 public class CalcolatriceFinanziaria {
     // implementare qui le funzionalità richieste
     public static void main(String[] args) {
+        BigDecimal bigDec = calcolaInteresse(new BigInteger("200000"), new BigDecimal("0.027"), 20);
+        System.out.println("Interesse: " + bigDec);
+
+        BigDecimal bigDec2 = calcolaRataMutuo(new BigDecimal("200000"), new BigDecimal("0.027"), 20);
+        System.out.println("Rata: " + bigDec2);
+
+        BigInteger sommaBigInt = sommaBigIntegers(new BigInteger("100000000000"), new BigInteger("200000000000"));
+        System.out.println("Somma: " + sommaBigInt);
+
+        BigDecimal divBigDec = divisioneSicuraBigDecimal(new BigDecimal("1000000000000.1"), new BigDecimal("2.99999999999"));
+        System.out.println("Divisione: " + divBigDec);
+
+
+    }
+
+    public static BigDecimal calcolaInteresse(BigInteger capitale, BigDecimal tasso, int anni) {
+        return tasso.add(BigDecimal.valueOf(1)).pow(anni).multiply(new BigDecimal(capitale)).subtract(new BigDecimal(capitale));
+    }
+
+
+    public static BigInteger sommaBigIntegers(BigInteger bigInt1, BigInteger bigInt2) {
+        return bigInt1.add(bigInt2);
+    }
+
+    public static BigInteger sommaBigIntegers(BigInteger[] arrayBigInt) {
+        BigInteger somma = new BigInteger("0");
+
+        for (BigInteger numero : arrayBigInt) {
+            somma = somma.add(numero);
+        }
+        return somma;
+    }
+
+    public static BigDecimal divisioneSicuraBigDecimal(BigDecimal bigDec1, BigDecimal bigDec2) {
+        if (bigDec2.equals(new BigDecimal(0))) {
+            throw new ArithmeticException();
+        }
+        return bigDec1.divide(bigDec2, 10, RoundingMode.HALF_UP);
+    }
+
+    public static BigDecimal calcolaRataMutuo(BigDecimal capitale, BigDecimal tassoDiInteresse, int anni) {
+        BigDecimal capitalePerTasso = capitale.multiply(tassoDiInteresse);
+        BigDecimal tassoPiu1 = tassoDiInteresse.add(BigDecimal.valueOf(1));
+        BigDecimal potenza = tassoPiu1.pow(anni);
+        BigDecimal unoSuPotenza = BigDecimal.valueOf(1).divide(potenza, 10, RoundingMode.HALF_UP);
+        BigDecimal unoMenoPotenza = BigDecimal.valueOf(1).subtract(unoSuPotenza);
+        BigDecimal rataAnnuale = capitalePerTasso.divide(unoMenoPotenza, 10, RoundingMode.HALF_UP);
+
+        return rataAnnuale.divide(BigDecimal.valueOf(12), 10, RoundingMode.HALF_UP);
     }
 }
