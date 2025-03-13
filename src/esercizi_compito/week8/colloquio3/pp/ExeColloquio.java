@@ -1,6 +1,7 @@
 package esercizi_compito.week8.colloquio3.pp;
 
 import java.time.OffsetDateTime;
+import java.time.ZoneOffset;
 
 class ClasseSingleton {
     private static volatile ClasseSingleton instance;
@@ -9,7 +10,7 @@ class ClasseSingleton {
         if (instance == null) {
             instance = new ClasseSingleton();
         }
-        return this;
+        return instance;
     }
 }
 
@@ -21,14 +22,14 @@ interface Formatter {
 // Classe che implementa l'interfaccia
 class UpperCaseFormatter implements Formatter {
     public String format(String input) {
-        return input.toUppercase();
+        return input.toUpperCase();
     }
 }
 
 // Classe con metodo statico
 class Utility {
     public static String getFormattedDate() {
-        OffsetDateTime now = OffsetDateTime.now(ZoneOffset.of("UTC+2"));
+        OffsetDateTime now = OffsetDateTime.now(ZoneOffset.of("+02:00"));
         return now.toString();
     }
 }
@@ -36,7 +37,7 @@ class Utility {
 // Classe con ternary operator corretto
 class TernaryExample {
     public static String checkValue(int value) {
-        return value > 10 ? "Greater" : "Lesser";
+        return value > 10 ? "Greater" : value == 10 ? "Equal" : "Lesser";
     }
 }
 
