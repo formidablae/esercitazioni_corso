@@ -1,6 +1,7 @@
 package esercizi_compito.week8.colloquio3.dc;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 public class SubstringCompare {
     /**
@@ -15,10 +16,17 @@ public class SubstringCompare {
      * output: "come", "welc"
      */
     public static String getSmallestAndLargest(String s, int k) {
-        String smallest = "";
-        String largest = "";
         // TODO: Complete the function
         // usare e implementare ordinaStringheLex
+        ArrayList<String> elencoSottoStringhe = new ArrayList<>();
+        for (int i = 0; i <= s.length() - k; i++) {
+            String subString = s.substring(i, i+k);
+            elencoSottoStringhe.add(subString);
+        }
+
+        ArrayList<String> elencoOrdinato = ordinaStringheLex(elencoSottoStringhe);
+        String smallest = elencoOrdinato.getFirst();
+        String largest = elencoOrdinato.getLast();
 
         return "stringa più 'lex-piccola' di " + k + " chars: " + smallest + "\nstringa più 'lex-grande' di " + k + " chars: " + largest;
     }
@@ -35,7 +43,7 @@ public class SubstringCompare {
      * output: ArrayList("a", "come", "nmg", "stai")
      */
     public static ArrayList<String> ordinaStringheLex(ArrayList<String> strings) {
-        // TODO:
+        Collections.sort(strings);
         return strings;
     }
 
