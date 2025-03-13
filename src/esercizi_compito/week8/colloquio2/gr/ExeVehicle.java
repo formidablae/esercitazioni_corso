@@ -2,7 +2,7 @@ package esercizi_compito.week8.colloquio2.gr;
 
 interface Vehicle {
     void start();
-    // richiedere che le classi che implementano Vehicle abbiano un metodo stop() che non restituisca nulla
+    void stop();
     int getSpeed();
 }
 
@@ -15,7 +15,9 @@ class Car implements Vehicle {
         this.speed = 0;
     }
 
-    // TODO: scrivere costruttore senza parametro model
+
+    public Car() {
+    }
 
     @Override
     public void start() {
@@ -24,7 +26,7 @@ class Car implements Vehicle {
 
     // Metodo da completare
     @Override
-    // TODO: Implementare
+    public void stop(){
         System.out.println(model + " is stopping.");
     }
 
@@ -35,29 +37,28 @@ class Car implements Vehicle {
 
     // Metodo da completare: accelerare l'auto aumentando la velocità di un valore dato
     public void accelerate(int increment) {
-        // TODO: Implementare l'incremento della velocità
+        System.out.println("velocità attuale: " + speed + ", sta aumentando la velocità di " + increment );
     }
 
     // Metodo da completare: restituire una descrizione dell'auto
     public String getDescription() {
-        // TODO: Restituire una stringa con modello e velocità
-        return null;
+        return "Modello: " + model + ", velocità: " + speed;
     }
 }
 
 class VehicleUtils {
     // Metodo statico da completare: confronta la velocità di due veicoli e restituisce il più veloce
     // TODO: metodo da sistemare firma
-    public Vehicle compareSpeed(Vehicle v1, Vehicle v2) {
+    public static int compareSpeed(Vehicle v1, Vehicle v2) {
         // TODO: Implementare il confronto
-        return null;
+        return v1.getSpeed() - v2.getSpeed();
     }
 }
 
 public class ExeVehicle {
     public static void main(String[] args) {
         Car car1 = new Car("Toyota");
-        Car car2 = new Car();
+        Car car2 = new Car("Bmw");
 
         car1.start();
         car2.start();
@@ -68,7 +69,7 @@ public class ExeVehicle {
         System.out.println(car1.getDescription()); // Il candidato deve implementare questo metodo
         System.out.println(car2.getDescription());
 
-        Vehicle fasterCar = VehicleUtils.compareSpeed(car1, car2); // Il candidato deve implementare questo metodo
-        System.out.println("The faster car is: " + (fasterCar != null ? ((Car) fasterCar).getDescription() : "None"));
+        int diffVelo = VehicleUtils.compareSpeed(car1, car2); // Il candidato deve implementare questo metodo
+        System.out.println("The faster car is: " + (diffVelo > 0? car1.getDescription() : diffVelo == 0? "velocità uguale" : car2.getDescription()));
     }
 }
