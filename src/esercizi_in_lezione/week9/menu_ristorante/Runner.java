@@ -17,6 +17,19 @@ public class Runner {
             System.out.println("4. Modifica portata");
             System.out.println("5. Salva menu su file");
             System.out.println("6. Stampa l'intero menu");
+            // TODO: inserire voce menu Ordina
+            // nuova classe Ordine
+            //   - hashmap chiave stringa num portata, valore un altro hashmap con
+            //        chiave counter, che sarebbe quanti piatti di quel tipo sono stati ordinati in quell'ordine
+            //        chiave piatto: la portata
+            //   - numero coperti
+            //   - prezzo
+            //   - data
+            //   - sconto
+            // TODO: inserire voce menu Visualizza portate ordinate
+            // TODO: inserire voce menu Visualizza tutti gli ordini
+            // TODO: inserire voce menu Trova ordine con una certa portata
+            // TODO: inserire voce menu Trova ordini con prezzo più grande di un certo importo
             System.out.println("0. Esci");
             System.out.print("Scelta: ");
             int scelta = scanner.nextInt();
