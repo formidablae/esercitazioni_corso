@@ -24,7 +24,7 @@ interface OrdinaArray {
     ArrayList<String> sort(ArrayList<String> array);
 }
 
-// TODO: scrivere una classe che implementa l'interfaccia e definisce il metodo
+// TODO: scrivena classe che implementa l'interfaccia e definisce il metodo
 
 class OrdinamentoArray implements OrdinaArray {
     @Override

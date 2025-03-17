@@ -1,0 +1,21 @@
+[ {
+  "nome" : "Pizza Margherita",
+  "prezzo" : 8.5,
+  "categoria" : "Pizza",
+  "ingredienti" : [ "pomodori", "formaggio" ]
+}, {
+  "nome" : "Tiramisù",
+  "prezzo" : 5.5,
+  "categoria" : "Dolci",
+  "ingredienti" : [ "zucchero" ]
+}, {
+  "nome" : "Lasagna",
+  "prezzo" : 12.0,
+  "categoria" : "Primi",
+  "ingredienti" : [ "pasta", "carne" ]
+}, {
+  "nome" : "Pasta alla carbonara",
+  "prezzo" : 12.0,
+  "categoria" : "Primi",
+  "ingredienti" : [ "uova" ]
+} ]
