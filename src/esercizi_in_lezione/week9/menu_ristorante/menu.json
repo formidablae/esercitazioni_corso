@@ -1,8 +1,13 @@
 [ {
+  "nome" : "Tagliere",
+  "prezzo" : 11.0,
+  "categoria" : "Taglieri",
+  "ingredienti" : [ "olive", " formaggi" ]
+}, {
   "nome" : "Pizza Margherita",
   "prezzo" : 8.5,
   "categoria" : "Pizza",
-  "ingredienti" : [ "pomodori", "formaggio" ]
+  "ingredienti" : [ "pomodori", "olio", "formaggio" ]
 }, {
   "nome" : "Tiramisù",
   "prezzo" : 5.5,

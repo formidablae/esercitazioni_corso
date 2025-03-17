@@ -25,6 +25,7 @@ public class MenuRistorante {
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Errore durante il caricamento del menu da file.");
+            portate = new HashSet<>();
         }
     }
 
@@ -61,6 +62,15 @@ public class MenuRistorante {
 
     public HashSet<Portata> getPortate() {
         return portate;
+    }
+
+    public Portata getPortataPerNome(String nome) {
+        for (Portata portata : portate) {
+            if (portata.getNome().equals(nome)) {
+                return portata;
+            }
+        }
+        return null;
     }
 
     public void setPortate(HashSet<Portata> portate) {
