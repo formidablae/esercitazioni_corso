@@ -65,6 +65,10 @@ public class School {
         students.add(s);
     }
 
+    public void addStudent(Student student) {
+        students.add(student);
+    }
+
     public void addGrade(String idStudente, String subject, int grade) {
         if (containsStudent(idStudente)) {
             if (containsSubject(subject)) {
@@ -106,6 +110,11 @@ public class School {
         return false;
     }
 
+    public boolean containsStudent(Student student) {
+        return containsStudent(student.getId());
+    }
+
+
     public boolean containsSubject(String subject) {
         for (Subject s : subjects) {
             if (s.getName().equals(subject)) {
@@ -115,6 +124,10 @@ public class School {
         return false;
     }
 
+    public boolean containsSubject(Subject subject) {
+        return containsSubject(subject.getName());
+    }
+
     public void addSubject(String subjectName) {
         Subject s = new Subject(subjectName);
         subjects.add(s);
@@ -122,6 +135,10 @@ public class School {
 
     public void addSubject(Subject subject) {
         subjects.add(subject);
+    }
+
+    public HashSet<Student> getStudents() {
+        return students;
     }
 
     public HashSet<String> getStudentIds() {
@@ -140,6 +157,10 @@ public class School {
         return subjects;
     }
 
+    public HashSet<Subject> getSubjects() {
+        return subjects;
+    }
+
     public Student getStudentById(String id) {
         for (Student s : students) {
             if (s.getId().equals(id)) {
@@ -147,5 +168,59 @@ public class School {
             }
         }
         return null;
+    }
+
+    public void clearStudents() {
+        students.clear();
+        grades.clear();
+    }
+
+    public void clearSubjects() {
+        subjects.clear();
+        grades.clear();
+    }
+
+    public void clearSchool() {
+        students.clear();
+        subjects.clear();
+        grades.clear();
+    }
+
+    public void clearGrades() {
+        grades.clear();
+    }
+
+    public int getTotalGradesCount() {
+        int count = 0;
+        for (String studentId : grades.keySet()) {
+            for (String subject : grades.get(studentId).keySet()) {
+                count += grades.get(studentId).get(subject).size();
+            }
+        }
+        return count;
+    }
+
+    public HashMap<String, ArrayList<Integer>> getGradesByStudent(String studentId) {
+        return grades.get(studentId);
+    }
+
+    public HashMap<String, ArrayList<Integer>> getGradesByStudent(Student student) {
+        return grades.get(student.getId());
+    }
+
+    public ArrayList<Integer> getGradesByStudentAndSubject(Student student, String subjectStr) {
+        return grades.get(student.getId()).get(subjectStr);
+    }
+
+    public ArrayList<Integer> getGradesByStudentAndSubject(String studentId, String subjectStr) {
+        return grades.get(studentId).get(subjectStr);
+    }
+
+    public ArrayList<Integer> getGradesByStudentAndSubject(String studentId, Subject subject) {
+        return grades.get(studentId).get(subject.getName());
+    }
+
+    public ArrayList<Integer> getGradesByStudentAndSubject(Student student, Subject subject) {
+        return grades.get(student.getId()).get(subject.getName());
     }
 }
