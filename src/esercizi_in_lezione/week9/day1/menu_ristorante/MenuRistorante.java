@@ -1,4 +1,4 @@
-package esercizi_in_lezione.week9.menu_ristorante;
+package esercizi_in_lezione.week9.day1.menu_ristorante;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
